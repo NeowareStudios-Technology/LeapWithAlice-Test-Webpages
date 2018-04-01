@@ -1,7 +1,7 @@
-/* Template	:	ICO Crypto v1.0.0 */
+/* Template	:	ICO Crypto v1.1.2 */
 (function($){
 	'use strict';
-	var $win = $(window), $doc = $(document), $body_m = $('body'), $navbar = $('.navbar');
+	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
 	
 	// Touch Class
 	if (!("ontouchstart" in document.documentElement)) {
@@ -89,11 +89,61 @@
 		$dropdown_menu.children('.dropdown-menu').fadeOut("400");
 	});
 
+	// remove ani
+	var $navtoggler = $('.navbar-toggler'), $trannav =$('.is-transparent');
+	if ($navtoggler.length > 0) {
+		$navtoggler.on("click",function(){
+			$('.remove-animation').removeClass('animated');
+			if (!$trannav.hasClass('active')) {
+				$trannav.addClass('active');
+			}else{
+				$trannav.removeClass('active');
+			}
+		});
+	}
+	
+	// Select
+	var $selectbox = $('select');
+	if ($selectbox.length > 0) {
+		$selectbox.select2();
+	}
 	
 	// Nav collapse
 	$('.menu-link').on("click",function() {
 		$('.navbar-collapse').collapse('hide');
+		$trannav.removeClass('active');
 	});
+	
+	//Carousel
+	var $timeline_carousel = $('.timeline-carousel');
+	if ($timeline_carousel.length > 0 ) {
+		var c_rtl = ($body_m.hasClass('is-rtl')) ? true : false;
+		$timeline_carousel.addClass('owl-carousel').owlCarousel({
+			navText: ["<i class='ti ti-angle-left'></i>","<i class='ti ti-angle-right'></i>"],
+			items:6,
+			nav:true,
+			margin:30,
+			rtl: c_rtl,
+			responsive:{
+				0 : {
+					items:1,
+				},
+				400 : {
+					items:2,
+					center:false,
+				},
+				599 : {
+					items:3,
+				},
+				1024 : {
+					items:5,
+				},
+				1170 : {
+					items:6,
+				}
+			}
+		});
+	}
 	
 	// Count Down
 	var $count_token = $('.token-countdown');
@@ -101,7 +151,7 @@
 		$count_token.each(function() {
 			var $self = $(this), datetime = $self.attr("data-date");
 			$self.countdown(datetime).on('update.countdown', function(event) {
-				$(this).html(event.strftime('' + '<div class="col"><span class="countdown-time">%D</span><span class="countdown-text">Days</span></div>' + '<div class="col"><span class="countdown-time">%H</span><span class="countdown-text">Hours</span></div>' + '<div class="col"><span class="countdown-time">%M</span><span class="countdown-text">Minutes</span></div>' + '<div class="col"><span class="countdown-time countdown-time-last">%S</span><span class="countdown-text">Seconds</span></div>'));
+				$(this).html(event.strftime('' + '<div class="col"><span class="countdown-time countdown-time-first">%D</span><span class="countdown-text">Days</span></div>' + '<div class="col"><span class="countdown-time">%H</span><span class="countdown-text">Hours</span></div>' + '<div class="col"><span class="countdown-time">%M</span><span class="countdown-text">Minutes</span></div>' + '<div class="col"><span class="countdown-time countdown-time-last">%S</span><span class="countdown-text">Seconds</span></div>'));
 			});
 		});
 		
@@ -159,7 +209,16 @@
 			}
 		});
 	}
-	
+	// Mask Class add
+	var $maskOV = $('[class*="mask-ov"]');
+	if ($maskOV.length > 0) {
+		$maskOV.each(function(){
+			var $this = $(this), $that = $this.parent();
+			if (!$that.hasClass('has-maskbg')) {
+				$that.addClass('has-maskbg');
+			}
+		});
+	}
 	// Ajax Form Submission
 	var contactForm = $('#contact-form'), subscribeForm = $('#subscribe-form');
 	if (contactForm.length > 0 || subscribeForm.length > 0) {
@@ -249,15 +308,6 @@
 		});
 	}
 	
-	// remove ani
-	var $navtoggler = $('.navbar-toggler');
-	if ($navtoggler.length > 0) {
-		$navtoggler.on("click",function(){
-			$('.remove-animation').removeClass('animated');
-		});
-	}
-	
-	
 	// Preloader
 	var $preload = $('#preloader'), $loader = $('#loader');
 	if ($preload.length > 0) {
@@ -283,11 +333,11 @@
 				}
 			},
 			"color": {
-				"value": "#2b56f5"
+				"value": ["#ef3f45","#ee6b47","#eeaa4c","#44f299","#4e8fed"]
 			},
 			"shape": {
 				"type": "circle",
-				"opacity": 0.08,
+				"opacity": 0.20,
 				"stroke": {
 					"width": 0,
 					"color": "#2b56f5"
@@ -302,7 +352,7 @@
 				}
 			},
 			"opacity": {
-				"value": 0.15,
+				"value": 1,
 				"random": false,
 				"anim": {
 					"enable": false,
@@ -322,16 +372,16 @@
 				}
 			},
 			"line_linked": {
-				"enable": true,
+				"enable": false,
 				"distance": 150,
 				"color": "#2b56f5",
-				"opacity": 0.15,
+				"opacity": 0.30,
 				"width": 1.3
 			},
 			"move": {
 				"enable": true,
 				"speed": 6,
-				"direction": "none",
+				"direction": "bottom-right",
 				"random": false,
 				"straight": false,
 				"out_mode": "out",
@@ -347,11 +397,11 @@
 			"detect_on": "canvas",
 			"events": {
 				"onhover": {
-					"enable": true,
+					"enable": false,
 					"mode": "repulse"
 				},
 				"onclick": {
-					"enable": true,
+					"enable": false,
 					"mode": "push"
 				},
 				"resize": true
@@ -386,5 +436,6 @@
 		}
 		// Stop here.
       );
-	}	
+	}
+	
 })(jQuery);
