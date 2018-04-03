@@ -2303,7 +2303,7 @@ Operations</span>
 					</ul>
 				</div><!-- .col  -->
 				<div class="col-lg-5">
-					<form id="contact-form" class="form-message text-left contact-form" action="https://formspree.io/info@leapwithalice.io" method="post">
+					<form id="contact-form" role="form" class="form-message text-left contact-form" action="https://formspree.io/info@leapwithalice.io" method="POST">
 						<div class="form-results"></div>
 						<div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
 							<input id="name" name="name" type="text" class="form-control input-line required">
@@ -2319,7 +2319,7 @@ Operations</span>
 						</div>
 						<input type="text" class="d-none" name="form-anti-honeypot" value="">
 						<div class="input-field animated" data-animate="fadeInUp" data-delay=".6">
-							<button type="submit" class="btn">Submit</button>
+							<button type="submit" value="Send" id="btn_submit" class="btn" onClick="proceed();">Submit</button>
 						</div>
 					</form>
 				</div><!-- .col  -->
