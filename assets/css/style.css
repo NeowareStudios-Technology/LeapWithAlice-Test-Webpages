@@ -31,6 +31,9 @@ Updated	 :	03.20.2018
 @font-face { font-family: 'Poppins'; src: url("../fonts/Poppins-Medium.eot"); src: local("Poppins Medium"), local("Poppins-Medium"), url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
 @font-face { font-family: 'Poppins'; src: url("../fonts/Poppins-Regular.eot"); src: local("Poppins Regular"), local("Poppins-Regular"), url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 /*! 02.0 - RESET */
+
+html {  overflow-x: initial !important;}
+
 body { font-family: "Poppins", sans-serif; color: #3c3c3c; font-size: 15px; line-height: 1.86; font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; position: relative; }
 
 body { color: #fff; background: #10122d; }
