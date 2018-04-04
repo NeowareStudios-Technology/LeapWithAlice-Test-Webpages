@@ -16,14 +16,10 @@
 	<link rel="stylesheet" href="assets/css/theme.css?ver=1.0">
 </head>
 
-<body class="theme-dark is-smooth-effect" data-spy="scroll" data-target="#mainnav" data-offset="80">
+<body class="theme-light" data-spy="scroll" data-target="#mainnav" data-offset="80">
 
 	<!-- Header --> 
 	<header class="site-header is-sticky">
-
-		<!-- Place Particle Js -->
-		<div id="particles-js" class="particles-container particles-js"></div>
-
 		<!-- Navbar -->
 		<div class="navbar navbar-expand-lg is-transparent" id="mainnav">
 			<nav class="container">
@@ -65,12 +61,12 @@
 		<!-- End Navbar -->
 
 		<!-- Banner/Slider -->
-		<div id="header" class="banner banner-curb d-flex align-items-center">
+		<div id="header" class="banner banner-full banner-curb banner-particle d-flex align-items-center">
 			<div class="container">
 				<div class="banner-content">
-					<div class="row align-items-center mobile-center">
-						<div class="col-lg-6 col-md-12 order-lg-first">
-							<div class="header-txt">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-12">
+							<div class="header-txt tab-center mobile-center">
 								<h1>Powering Data for the new equity blockchain</h1>
 								<p class="lead color-secondary">Global decentralize network to buy &amp; sell shares</p>
 								<ul class="btns">
@@ -87,11 +83,17 @@
 								</ul>
 							</div>
 						</div><!-- .col  -->
-						<div class="col-lg-6 col-md-12 order-first">
-							<div class="header-image">
-								<img src="images/header-image-dark.png" alt="header">
-								<img class="header-image-icon left-icon" src="images/header-icon-a.png" alt="header-icon">
-								<img class="header-image-icon right-icon" src="images/header-icon-b.png" alt="header-icon">
+						<div class="col-lg-5 offset-lg-1 col-md-12">
+							<div class="countdown-box countdown-header text-center">
+								<span class="extra-line"></span>
+								<div class="token-countdown d-flex align-content-stretch" data-date="2018/03/05"></div>
+								<a href="#" class="btn btn-alt btn-sm">Join &amp; BUY TOKEN NOW</a>
+								<ul class="icon-list">
+									<li><em class="fa fa-bitcoin"></em></li>
+									<li><em class="fa fa-won"></em></li>
+									<li><em class="fa fa-cc-visa"></em></li>
+									<li><em class="fa fa-cc-mastercard"></em></li>
+								</ul>
 							</div>
 						</div><!-- .col  -->
 					</div><!-- .row  -->
@@ -104,12 +106,12 @@
 
 
 	<!-- Start Section -->
-	<div class="section section-pad section-bg-blend nopb" id="intro">
+	<div class="section section-pad section-bg-alt nopb" id="intro">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-5 offset-md-1">
 					<div class="res-m-btm">
-						<img src="images/graph-dark-a.png" alt="graph">
+						<img src="images/graph-light-a.png" alt="graph">
 					</div>
 				</div><!-- .col  -->
 				<div class="col-md-6 order-md-first order-last">
@@ -135,7 +137,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-5">
 					<div class="res-m-btm">
-						<img src="images/graph-dark-b.png" alt="graph">
+						<img src="images/graph-light-b.png" alt="graph">
 					</div>
 				</div><!-- .col  -->
 				<div class="col-md-6 offset-md-1">
@@ -176,7 +178,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-6">
 					<div class="res-m-btm">
-						<img src="images/graph-dark-c.png" alt="graph">
+						<img src="images/graph-light-c.png" alt="graph">
 					</div>
 				</div><!-- .col  -->
 
@@ -284,7 +286,7 @@
 					<div class="single-chart res-m-btm">
 						<h3 class="sub-heading">Distribution <br class="hidden-xs"> of tokens</h3>
 						<div>
-							<img src="images/chart-dark-a.png" alt="chart">
+							<img src="images/chart-light-a.png" alt="chart">
 						</div>
 					</div>
 				</div><!-- .col  -->
@@ -293,7 +295,7 @@
 					<div class="single-chart">
 						<h3 class="sub-heading">Use <br class="hidden-xs"> of proceeds</h3>
 						<div>
-							<img src="images/chart-dark-b.png" alt="chart">
+							<img src="images/chart-light-b.png" alt="chart">
 						</div>
 					</div>
 				</div><!-- .col  -->
@@ -406,17 +408,17 @@
 				</div>
 			</div>
 
-			<div class="row text-center">
+			<div class="row">
 
-				<div class="col-md-6 col-lg-3">
-					<div class="team-circle">
+				<div class="col-md-6 col-lg-3 d-inline-flex justify-content-center">
+					<div class="team-member">
 						<div class="team-photo">
-							<img src="images/team-a-sq.jpg" alt="" />
+							<img src="images/team-a-sq.jpg" alt="team">
 							<a href="#team-profile-1" class="expand-trigger content-popup"></a>
 						</div>
 						<div class="team-info">
-							<h5 class="team-name">Waylon Dalton</h5>
-							<span class="team-title">CEO &amp; Lead Blockchain </span>
+							<h5 class="team-name">Waylon <br>Dalton</h5>
+							<span class="team-title">CEO & Lead Blockchain </span>
 							<ul class="team-social">
 								<li><a href=""><em class="fa fa-facebook"></em></a></li>
 								<li><a href=""><em class="fa fa-linkedin"></em></a></li>
@@ -426,19 +428,19 @@
 
 						<!-- Start .team-profile  -->
 						<div id="team-profile-1" class="team-profile mfp-hide">
-							<button title="Close" type="button" class="mfp-close">×</button>
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 							<div class="container-fluid">
 								<div class="row no-mg">
 									<div class="col-md-6">
 										<div class="team-profile-photo">
-											<img src="images/team-a-lg.jpg" alt="" />
+											<img src="images/team-a-lg.jpg" alt="team" />
 										</div>
 									</div><!-- .col  -->
 
 									<div class="col-md-6">
 										<div class="team-profile-info">
 											<h3 class="name">Waylon Dalton</h3>
-											<p class="sub-title">CEO &amp; Lead Blockchain </p>
+											<p class="sub-title">CEO & Lead Blockchain </p>
 											<ul class="tpi-social">
 												<li><a href="#"><em class="fa fa-facebook"></em></a></li>
 												<li><a href="#"><em class="fa fa-twitter"></em></a></li>
@@ -486,15 +488,15 @@
 					</div>
 				</div><!-- .col  -->
 
-				<div class="col-md-6 col-lg-3">
-					<div class="team-circle">
+				<div class="col-md-6 col-lg-3 d-inline-flex justify-content-center">
+					<div class="team-member">
 						<div class="team-photo">
 							<img src="images/team-b-sq.jpg" alt="team">
 							<a href="#team-profile-2" class="expand-trigger content-popup"></a>
 						</div>
 						<div class="team-info">
-							<h5 class="team-name">Stefan Harary</h5>
-							<span class="team-title">CTO &amp; Senior Developer</span>
+							<h5 class="team-name">Stefan <br>Harary</h5>
+							<span class="team-title">CTO & Senior Developer</span>
 							<ul class="team-social">
 								<li><a href=""><em class="fa fa-facebook"></em></a></li>
 								<li><a href=""><em class="fa fa-linkedin"></em></a></li>
@@ -504,7 +506,7 @@
 
 						<!-- Start .team-profile  -->
 						<div id="team-profile-2" class="team-profile mfp-hide">
-							<button title="Close" type="button" class="mfp-close">×</button>
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 							<div class="container-fluid">
 								<div class="row no-mg">
 									<div class="col-md-6">
@@ -516,7 +518,7 @@
 									<div class="col-md-6">
 										<div class="team-profile-info">
 											<h3 class="name">Stefan Harary</h3>
-											<p class="sub-title">CTO &amp; Senior Developer</p>
+											<p class="sub-title">CTO & Senior Developer</p>
 											<ul class="tpi-social">
 												<li><a href="#"><em class="fa fa-facebook"></em></a></li>
 												<li><a href="#"><em class="fa fa-twitter"></em></a></li>
@@ -564,14 +566,14 @@
 					</div>
 				</div><!-- .col  -->
 
-				<div class="col-md-6 col-lg-3">
-					<div class="team-circle">
+				<div class="col-md-6 col-lg-3 d-inline-flex justify-content-center">
+					<div class="team-member">
 						<div class="team-photo">
 							<img src="images/team-c-sq.jpg" alt="team">
 							<a href="#team-profile-3" class="expand-trigger content-popup"></a>
 						</div>
 						<div class="team-info">
-							<h5 class="team-name">Moises Teare</h5>
+							<h5 class="team-name">Moises <br>Teare</h5>
 							<span class="team-title">Blochain App Developer</span>
 							<ul class="team-social">
 								<li><a href=""><em class="fa fa-facebook"></em></a></li>
@@ -582,7 +584,7 @@
 
 						<!-- Start .team-profile  -->
 						<div id="team-profile-3" class="team-profile mfp-hide">
-							<button title="Close" type="button" class="mfp-close">×</button>
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 							<div class="container-fluid">
 								<div class="row no-mg">
 									<div class="col-md-6">
@@ -642,14 +644,14 @@
 					</div>
 				</div><!-- .col  -->
 
-				<div class="col-md-6 col-lg-3">
-					<div class="team-circle">
+				<div class="col-md-6 col-lg-3 d-inline-flex justify-content-center">
+					<div class="team-member">
 						<div class="team-photo">
 							<img src="images/team-d-sq.jpg" alt="team">
 							<a href="#team-profile-4" class="expand-trigger content-popup"></a>
 						</div>
 						<div class="team-info">
-							<h5 class="team-name">Gabriel Bernal</h5>
+							<h5 class="team-name">Gabriel <br>Bernal</h5>
 							<span class="team-title">Community Management</span>
 							<ul class="team-social">
 								<li><a href=""><em class="fa fa-facebook"></em></a></li>
@@ -660,7 +662,7 @@
 
 						<!-- Start .team-profile  -->
 						<div id="team-profile-4" class="team-profile mfp-hide">
-							<button title="Close" type="button" class="mfp-close">×</button>
+							<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 							<div class="container-fluid">
 								<div class="row no-mg">
 									<div class="col-md-6">
@@ -727,24 +729,29 @@
 					<div class="gaps size-2x"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-10 offset-md-1">
-					<div class="row text-center">
+			<div class="row justify-content-center">
+				<div class="col-lg-9 col-md-12">
+					<div class="row">
 
-						<div class="col-lg-4 col-md-6">
-							<div class="team-circle">
+						<div class="col-lg-4 col-md-6 d-inline-flex justify-content-center">
+							<div class="team-member">
 								<div class="team-photo">
 									<img src="images/team-e-sq.jpg" alt="team">
 									<a href="#team-profile-5" class="expand-trigger content-popup"></a>
 								</div>
 								<div class="team-info">
-									<h5 class="team-name">Dylan Finch</h5>
+									<h5 class="team-name">Dylan <br>Finch</h5>
 									<span class="team-title">Board Advisor</span>
+									<ul class="team-social">
+										<li><a href=""><em class="fa fa-facebook"></em></a></li>
+										<li><a href=""><em class="fa fa-linkedin"></em></a></li>
+										<li><a href=""><em class="fa fa-twitter"></em></a></li>
+									</ul>
 								</div>
 
 								<!-- Start .team-profile  -->
 								<div id="team-profile-5" class="team-profile mfp-hide">
-									<button title="Close" type="button" class="mfp-close">×</button>
+									<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 									<div class="container-fluid">
 										<div class="row no-mg">
 											<div class="col-md-6">
@@ -804,23 +811,27 @@
 							</div>
 						</div><!-- .col  -->
 
-						<div class="col-lg-4 col-md-6">
-							<div class="team-circle">
+						<div class="col-lg-4 col-md-6 d-inline-flex justify-content-center">
+							<div class="team-member">
 								<div class="team-photo">
 									<img src="images/team-f-sq.jpg" alt="team">
 									<a href="#team-profile-6" class="expand-trigger content-popup"></a>
 								</div>
 								<div class="team-info">
-									<h5 class="team-name">Julian Paten</h5>
+									<h5 class="team-name">Julian <br>Paten</h5>
 									<span class="team-title">Board Advisor</span>
+									<ul class="team-social">
+										<li><a href=""><em class="fa fa-facebook"></em></a></li>
+										<li><a href=""><em class="fa fa-linkedin"></em></a></li>
+										<li><a href=""><em class="fa fa-twitter"></em></a></li>
+									</ul>
 								</div>
 
 								<!-- Start .team-profile  -->
 								<div id="team-profile-6" class="team-profile mfp-hide">
-									<button title="Close" type="button" class="mfp-close">×</button>
+									<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 									<div class="container-fluid">
 										<div class="row no-mg">
-
 											<div class="col-md-6">
 												<div class="team-profile-photo">
 													<img src="images/team-f-lg.jpg" alt="team" />
@@ -874,26 +885,31 @@
 										</div><!-- .row  -->
 									</div><!-- .container  -->
 								</div><!-- .team-profile  -->
+
 							</div>
 						</div><!-- .col  -->
 
-						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-							<div class="team-circle">
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 d-inline-flex justify-content-center">
+							<div class="team-member">
 								<div class="team-photo">
 									<img src="images/team-g-sq.jpg" alt="team">
 									<a href="#team-profile-7" class="expand-trigger content-popup"></a>
 								</div>
 								<div class="team-info">
-									<h5 class="team-name">Jaxon Kilburn</h5>
+									<h5 class="team-name">Jaxon <br>Kilburn</h5>
 									<span class="team-title">Board Advisor</span>
+									<ul class="team-social">
+										<li><a href=""><em class="fa fa-facebook"></em></a></li>
+										<li><a href=""><em class="fa fa-linkedin"></em></a></li>
+										<li><a href=""><em class="fa fa-twitter"></em></a></li>
+									</ul>
 								</div>
 
 								<!-- Start .team-profile  -->
 								<div id="team-profile-7" class="team-profile mfp-hide">
-									<button title="Close" type="button" class="mfp-close">×</button>
+									<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 									<div class="container-fluid">
 										<div class="row no-mg">
-
 											<div class="col-md-6">
 												<div class="team-profile-photo">
 													<img src="images/team-g-lg.jpg" alt="team" />
