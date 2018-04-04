@@ -383,7 +383,7 @@
 				"speed": 2,
 				"direction": "bottom-right",
 				"random": false,
-				"straight": false,
+				"straight": true,
 				"out_mode": "out",
 				"bounce": true,
 				"attract": {
