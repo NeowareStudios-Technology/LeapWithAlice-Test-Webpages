@@ -696,7 +696,7 @@ select:focus { outline: none; border: none; }
 .site-header .navbar-brand { height: auto; padding: 0; }
 .site-header .navbar-brand img { width: auto; max-width: 100%; max-height: 40px; }
 .site-header .navbar-header .quote-btn { display: none; }
-.site-header .navbar-collapse { padding: 0; background-color: transparent; color: #3c3c3c; }
+.site-header .navbar-collapse { padding: 0; background-color: transparent; color: #fff; }
 .site-header .logo-light { display: none; }
 
 .navbar .navbar-nav > li:hover > a { color: #46bdf4; background: transparent; }
@@ -763,7 +763,7 @@ select:focus { outline: none; border: none; }
 .theme-light .site-header .navbar.is-transparent .navbar-brand .logo-light { display: none; }
 .theme-light .site-header.has-fixed .navbar { background: #e5f0ff; border-bottom-color: rgba(0, 0, 0, 0.04); }
 
-.io-azure .site-header.has-fixed .navbar { background: #0b3795; border-bottom-color: rgba(0, 0, 0, 0.04); }
+.io-azure .site-header.has-fixed .navbar { background: #41468C; border-bottom-color: #393E9A; }
 
 .language-switcher { position: relative; }
 .language-switcher:before { position: absolute; content: ''; left: 0; top: 0; height: 30px; width: 1px; background: rgba(255, 255, 255, 0.1); }
