@@ -804,7 +804,9 @@ select:focus { outline: none; border: none; }
 
 @keyframes jumping { 0% { transform: translateY(5px); }
   100% { transform: translateY(-25px); } }
-.header-txt { position: relative; z-index: 3; }
+.header-txt { position: center; z-index: 3; }
+
+
 
 /* @v111 s*/
 .page { position: relative; }
