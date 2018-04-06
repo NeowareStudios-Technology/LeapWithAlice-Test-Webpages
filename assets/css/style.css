@@ -1024,8 +1024,8 @@ select:focus { outline: none; border: none; }
 .section-bg-alt .countdown-box { background: #10122d; }
 .io-azure .countdown-box { background: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%); }
 .io-azure .countdown-box .token-countdown .countdown-text { color: #340075; }
-.io-azure .countdown-box .btn.btn-alt { padding-left: 40px; padding-right: 40px; -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #340075 0%, #0d9ee0 100%); }
-.io-azure .countdown-box .btn.btn-alt:before { -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #0d9ee0 0%, #340075 100%); }
+.io-azure .countdown-box .btn.btn-alt { padding-left: 40px; padding-right: 40px; -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #353AC7 0%, #785BFE 100%); }
+.io-azure .countdown-box .btn.btn-alt:before { -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #785BFE 0%, #353AC7 100%); }
 .countdown-box h6 { text-transform: uppercase; }
 .countdown-box .token-countdown { padding-bottom: 33px; }
 .countdown-box .token-countdown .countdown-time { font-size: 45px; font-weight: 300; line-height: 1; display: block; margin-bottom: 5px; position: relative; }

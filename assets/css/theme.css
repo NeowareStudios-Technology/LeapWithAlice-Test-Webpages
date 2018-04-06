@@ -94,12 +94,12 @@ a:hover, a:focus, a:active { color: #8255fd; }
 
 .event-info:before { background: #46bdf4; }
 
-.countdown-box .token-countdown .countdown-text { color: #46bdf4; }
-.countdown-box.countdown-header:after { border-color: rgba(122, 15, 255, 0.1); }
-.countdown-box.countdown-header:before { border-color: rgba(122, 15, 255, 0.1); }
-.countdown-box.countdown-header .extra-line { border-color: rgba(122, 15, 255, 0.1); }
-.countdown-box.countdown-header .extra-line:after { border-color: rgba(122, 15, 255, 0.1); }
-.io-azure .countdown-box { background: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%); }
+.countdown-box .token-countdown .countdown-text { color: #fff; }
+.countdown-box.countdown-header:after { border-color: #fff; }
+.countdown-box.countdown-header:before { border-color: #fff; }
+.countdown-box.countdown-header .extra-line { border-color: #fff; }
+.countdown-box.countdown-header .extra-line:after { border-color: #fff; }
+.io-azure .countdown-box { background: linear-gradient(to right, #fff 0%, #fff 100%); }
 
 .roadmap-list:after { background: #7a0fff; }
 
