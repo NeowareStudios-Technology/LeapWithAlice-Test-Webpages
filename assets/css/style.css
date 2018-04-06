@@ -1029,6 +1029,8 @@ select:focus { outline: none; border: none; }
 .io-azure .countdown-box .token-countdown .countdown-text { color: #340075; }
 .io-azure .countdown-box .btn.btn-alt { padding-left: 40px; padding-right: 40px; -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #353AC7 0%, #785BFE 100%); }
 .io-azure .countdown-box .btn.btn-alt:before { -ms-border-radius: 19px; border-radius: 19px; background-image: linear-gradient(to right, #785BFE 0%, #353AC7 100%); }
+.io-azure .banner-tokensale .countdown-box .btn.btn-alt { -ms-border-radius: 4px; border-radius: 4px; background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%); }
+.io-azure .banner-tokensale .countdown-box .btn.btn-alt:before { -ms-border-radius: 4px; border-radius: 4px; background-image: linear-gradient(to right, #46bdf4 0%, #7a0fff 100%); }
 .countdown-box h6 { text-transform: uppercase; }
 .countdown-box .token-countdown { padding-bottom: 33px; }
 .countdown-box .token-countdown .countdown-time { font-size: 45px; font-weight: 300; line-height: 1; display: block; margin-bottom: 5px; position: relative; }
@@ -1044,9 +1046,38 @@ select:focus { outline: none; border: none; }
 .countdown-box.countdown-header .extra-line { position: absolute; top: 50%; left: calc(50% + 15px); content: ""; height: 565px; width: 575px; transform: translate(-50%, -50%); border: 1px solid rgba(122, 15, 255, 0.1); border-radius: 50%; }
 .countdown-box.countdown-header .extra-line:after { position: absolute; top: 50%; left: calc(50% + 25px); content: ""; height: 565px; width: 575px; transform: translate(-50%, -50%); border: 1px solid rgba(122, 15, 255, 0.1); border-radius: 50%; }
 
+
+.banner-tokensale .countdown-box { position: absolute; top: 50%; left: 10%; width: 80%; transform: translateY(-50%); z-index: 999; }
+.banner-tokensale .countdown-box .token-countdown .countdown-text { color: #fff; }
+.banner-tokensale .header-image-alt img { opacity: .2; }
+
+
 .theme-light .countdown-box .token-countdown .countdown-time:after { color: #6e7e98; }
 .theme-light .section-bg .countdown-box { background: #fff; }
 .theme-light .section-bg-alt .countdown-box { background: #eff6ff; }
+
+
+
+
+
+
+.token-status-bar { position: relative; height: 15px; border-radius: 4px; background: #fff; margin: 30px 0; }
+.io-azure .token-status-bar { background: rgba(255, 255, 255, 0.4); }
+.token-status-percent { position: absolute; top: 0; left: 0; height: 100%; border-radius: 3px 0 0 3px; background: linear-gradient(to right, #46bdf4 0%, #7a0fff 100%); }
+.io-azure .token-status-percent { background: #2b56f5; }
+.io-azure .banner-tokensale .token-status-percent { background: linear-gradient(to right, #2b56f5 0%, #0b39e2 100%); }
+.token-status-point { position: absolute; font-size: .75em; transform: translateX(-50%); top: -35px; text-transform: uppercase; }
+.token-status-point:after { position: absolute; left: 50%; top: calc(100% - 1px); height: 30px; width: 1px; content: ''; background: rgba(130, 85, 253, 0.35); }
+.io-azure .token-status-point:after { background: rgba(255, 255, 255, 0.35); }
+.token-status-point-1 { left: 20%; }
+.token-status-point-2 { left: 40%; }
+.token-status-point-3 { left: 60%; }
+.token-status-point-4 { left: 80%; }
+
+
+
+
+
 
 /* @v1.1.0 s */
 @media only screen and (max-width: 1024px) and (max-width: 1199px) { .countdown-box .token-countdown .countdown-time { font-size: 35px; font-weight: 300; } }
@@ -1058,6 +1089,7 @@ select:focus { outline: none; border: none; }
   .countdown-box .token-countdown .countdown-time { font-size: 20px; margin-bottom: 5px; }
   .countdown-box .token-countdown .countdown-time:after { font-size: 18px; bottom: 0; }
   .countdown-box .token-countdown .countdown-text { font-size: 9px; } }
+    .token-status-bar { margin: 20px; } }
 .single-chart h2, .single-chart h3, .single-chart h4 { padding-bottom: 40px; }
 
 /*! 09.0 - ROADMAP SECTION */
