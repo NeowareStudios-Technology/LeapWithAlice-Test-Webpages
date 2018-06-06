@@ -180,7 +180,6 @@
 							</ul>
 						</div>
 					</div> -->
-					<button id = "morePosts">Load More Posts</button> 
 				</div><!-- .col -->
 	
 				<div class="col-lg-4">
@@ -467,6 +466,10 @@
 								trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
 								output += '<p>' + trimmedString + '...</p>';
 								output += '</div></div></div>';
+
+								if ((i == 3) || (i == 7){
+									output += '<button id = "morePosts">Load More Posts</button>';
+								}
 								
 								i = k;
 								return k < (m+4);
