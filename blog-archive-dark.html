@@ -383,7 +383,7 @@
 										visibleSm = ' visible-sm';
 								}
 
-								output += '<div class="col-sm-6 col-md-4' + visibleSm + '">';
+								output += '<div class="col-lg-8' + visibleSm + '">';
 								output += '<div class="blog-post"><header>';
 								output += '<h4 class="date">' + $.format.date(item.pubDate, "dd<br>MMM") + "</h4>";
 
@@ -394,7 +394,7 @@
 								var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
 
 								output += '<div class="blog-photo"><img class="img-responsive" src="' + src + '" width="360px" height="240px"></div></header>';
-								output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
+								output += '<div class="blog-title"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
 								output += '<div class="post-meta"><span>By ' + item.author + '</span></div>';
 
 								var yourString = item.description.replace(/<img[^>]*>/g,"");
