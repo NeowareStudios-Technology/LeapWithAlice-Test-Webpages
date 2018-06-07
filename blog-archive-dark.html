@@ -406,7 +406,11 @@
 								trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
 								output += '<p>' + trimmedString + '...</p>';
 								output += '</div></div></div>';
-						
+								
+								if (k == 3){
+									output += '<button id = "morePosts">Load More Posts</button>';
+								}
+
 								i = k;
 								return k < 3;
 						});
@@ -467,7 +471,7 @@
 								output += '<p>' + trimmedString + '...</p>';
 								output += '</div></div></div>';
 
-								if ((i == 3) || (i == 7)){
+								if (k == 7){
 									output += '<button id = "morePosts">Load More Posts</button>';
 								}
 								
