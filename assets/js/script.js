@@ -518,3 +518,15 @@
       );
 	}
 })(jQuery);
+
+
+/******************************************************************************
+*                   NEW HEADER IMAGE ANIMATION                                *
+*******************************************************************************/
+var animation = data.loadAnimation({
+	container = document.getElementById('bm'),
+	renderer = 'svg',
+	loop = true,
+	autoplay = true,
+	path = 'assets/js/data.json'
+})
