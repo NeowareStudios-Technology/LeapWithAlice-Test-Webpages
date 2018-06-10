@@ -523,10 +523,10 @@
 /******************************************************************************
 *                   NEW HEADER IMAGE ANIMATION                                *
 *******************************************************************************/
-var animation = bodymovin.loadAnimation({
-	container = document.getElementById('bm'),
-	renderer = 'svg',
-	loop = true,
-	autoplay = true,
-	path = 'assets/js/data.json'
+var animation: bodymovin.loadAnimation({
+	container: document.getElementById('bm'),
+	renderer: 'svg',
+	loop: true,
+	autoplay: true,
+	path: 'assets/js/data.json'
 })
