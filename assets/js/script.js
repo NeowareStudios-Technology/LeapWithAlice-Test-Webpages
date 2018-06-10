@@ -523,7 +523,7 @@
 /******************************************************************************
 *                   NEW HEADER IMAGE ANIMATION                                *
 *******************************************************************************/
-var animation = data.loadAnimation({
+var animation = bodymovin.loadAnimation({
 	container = document.getElementById('bm'),
 	renderer = 'svg',
 	loop = true,
