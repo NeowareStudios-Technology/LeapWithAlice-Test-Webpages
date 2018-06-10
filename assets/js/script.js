@@ -524,7 +524,7 @@
 *                   NEW HEADER IMAGE ANIMATION                                *
 *******************************************************************************/
 var animation = bodymovin.loadAnimation({
-	container: document.getElementById('bm'),
+	container: document.getElementById('animatedHeader'),
 	renderer: 'svg',
 	loop: true,
 	autoplay: true,
