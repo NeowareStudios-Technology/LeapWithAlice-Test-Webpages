@@ -407,7 +407,7 @@
         {
 		"particles": {
 			"number": {
-				"value": 40,
+				"value": 41,
 				"density": {
 					"enable": true,
 					"value_area": 400
@@ -418,7 +418,7 @@
 			},
 			"shape": {
 				"type": "circle",
-				"opacity": 0.20,
+				"opacity": 0.21,
 				"stroke": {
 					"width": 0,
 					"color": "#2b56f5"
