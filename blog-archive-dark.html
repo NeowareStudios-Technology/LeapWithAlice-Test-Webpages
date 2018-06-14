@@ -383,9 +383,9 @@
 										visibleSm = ' visible-sm';
 								}
 
-								output += '<div class="col-lg-6 offset-lg-0 col-sm-6' + visibleSm + '">';
-								output += '<div class="blog-post"><header>';
-								output += '<h4 class="date">' + $.format.date(item.pubDate, "dd<br>MMM") + "</h4>";
+								output += '<div id="mainID" class="col-lg-6 offset-lg-0 col-sm-6' + visibleSm + '">';
+								output += '<div id="blogID" class="blog-post"><header>';
+								output += '<h4 id="dateID" class="date">' + $.format.date(item.pubDate, "dd<br>MMM") + "</h4>";
 
 								var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
 								var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
@@ -393,9 +393,9 @@
 								var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
 								var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
 
-								output += '<div class="blog-photo"><img class="img-responsive" src="' + src + '"></div></header>';
-								output += '<div class="blog-title"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
-								output += '<div class="post-meta"><span>By ' + item.author + '</span></div>';
+								output += '<div id="blogPhotoID" class="blog-photo"><img class="img-responsive" src="' + src + '"></div></header>';
+								output += '<div id="blogTitleID" class="blog-title"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
+								output += '<div id="blogMetaID" class="post-meta"><span>By ' + item.author + '</span></div>';
 
 								var yourString = item.description.replace(/<img[^>]*>/g,"");
 								var maxLength = 120 // maximum number of characters to extract
