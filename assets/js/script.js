@@ -398,6 +398,23 @@
 			autoplayHoverPause:true
 		});
 	}
+
+
+
+
+
+var animation = bodymovin.loadAnimation({
+	container: document.getElementById('animatedHeader'),
+	renderer: 'svg',
+	loop: true,
+	autoplay: true,
+	path: 'assets/js/data.json'
+})
+
+
+
+
+	
 	
 	// particlesJS
 	var $particles_js = $('#particles-js');
@@ -523,10 +540,3 @@
 /******************************************************************************
 *                   NEW HEADER IMAGE ANIMATION                                *
 *******************************************************************************/
-var animation = bodymovin.loadAnimation({
-	container: document.getElementById('animatedHeader'),
-	renderer: 'svg',
-	loop: true,
-	autoplay: true,
-	path: 'assets/js/data.json'
-})
