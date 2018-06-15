@@ -400,7 +400,7 @@
 
 
 								output += '<div id="blogTitleID" class="blog-title blog-texts"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
-								output += '<div id="blogMetaID" class="post-meta"><span>By ' + item.author + '</span></div>';
+								// output += '<div id="blogMetaID" class="post-meta"><span>By ' + item.author + '</span></div>';
 
 
 
@@ -412,7 +412,7 @@
 
 								//re-trim if we are in the middle of a word
 								trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-								output += '<h5 id="description">'  + trimmedString +'... </h5>';
+								output += '<p id="description">'  + trimmedString +'... </p>';
 								output += '<h5 id="dateID" class="date">' + $.format.date(item.pubDate, "dd MMM") + "</h5>";
 
 								output += '</div></div></div><br><br>';
