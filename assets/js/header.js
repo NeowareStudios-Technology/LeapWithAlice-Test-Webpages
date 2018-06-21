@@ -1,6 +1,3 @@
-/******************************************************************************
-*                   NEW HEADER IMAGE ANIMATION                                *
-*******************************************************************************/
 var animation = bodymovin.loadAnimation({
 	container: document.getElementById('animatedHeader'),
 	renderer: 'svg',
