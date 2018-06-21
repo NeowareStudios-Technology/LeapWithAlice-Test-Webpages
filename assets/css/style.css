@@ -1642,6 +1642,12 @@ select:focus {
   width: 100%;
   z-index: 7; }
 
+#animatedHeader {
+ z-index: -1; 
+
+}
+
+
 .theme-dark:not(.io-azure) .particles-container {
   opacity: .7; }
 
