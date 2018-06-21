@@ -398,15 +398,14 @@
 			autoplayHoverPause:true
 		});
 	}
-
-
-
-
-
+	
+/******************************************************************************
+*                   NEW HEADER IMAGE ANIMATION                                *
+*******************************************************************************/
 var animation = bodymovin.loadAnimation({
 	container: document.getElementById('animatedHeader'),
 	renderer: 'svg',
-	loop: true,
+
 	autoplay: true,
 	path: 'assets/js/data.json'
 })
@@ -414,8 +413,7 @@ var animation = bodymovin.loadAnimation({
 
 
 
-	
-	
+
 	// particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
@@ -424,7 +422,7 @@ var animation = bodymovin.loadAnimation({
         {
 		"particles": {
 			"number": {
-				"value": 41,
+				"value": 40,
 				"density": {
 					"enable": true,
 					"value_area": 400
@@ -435,7 +433,7 @@ var animation = bodymovin.loadAnimation({
 			},
 			"shape": {
 				"type": "circle",
-				"opacity": 0.21,
+				"opacity": 0.20,
 				"stroke": {
 					"width": 0,
 					"color": "#2b56f5"
@@ -537,6 +535,3 @@ var animation = bodymovin.loadAnimation({
 })(jQuery);
 
 
-/******************************************************************************
-*                   NEW HEADER IMAGE ANIMATION                                *
-*******************************************************************************/

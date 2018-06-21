@@ -1136,9 +1136,11 @@ select:focus { outline: none; border: none; }
 
 
 
-.section-blog-color {width: 90%; color: #000;}
+.section-blog-color {width: 100%; color: #000; }
 .section-blog-color h5 {color: #000;}
+.border {border-radius: 3%;}
 
+.description { background: #000;}
 
 
 
@@ -1614,10 +1616,11 @@ select:focus { outline: none; border: none; }
 /*! 16.0 - BLOG SECTION/PAGES */
 .blog-section .section-head, .blog-section .section-head-s2 { padding-bottom: 30px; }
 .blog-item { margin-bottom: 50px; }
-.blog-photo a { display: block; position: relative; }
-.blog-photo a:after { position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: ''; background: linear-gradient(to right, #0043EC 0%, #0043EC 100%); opacity: .2; transition: all .5s ease; }
-.blog-photo a:hover:after { opacity: .5; }
-.blog-photo img { border-radius: 0; min-width: 100%; }
+.blog-photo a { display: block; position: relative; position: relative; top: -1px; left: -1px; width: 100.36%;}
+.blog-photo a:after {  border-top-left-radius: 3%; border-top-right-radius: 3%;  position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: ''; background: linear-gradient(to right, #0043EC 0%, #0043EC 100%); opacity: .2; transition: all .5s ease; }
+.blog-photo a:hover:after { opacity: .5;  border-top-left-radius: 3%; border-top-right-radius: 3%;}
+.blog-photo a:hover {  border-top-left-radius: 3%; border-top-right-radius: 3%; }
+.blog-photo img {  border-top-left-radius: 3%; border-top-right-radius: 3%; min-width: 100%; }
 .blog-texts { padding: 24px 30px; background: #fff; }
 .blog-texts p { color: #8284a5; }
 .blog-meta { margin: 0 -10px; }
@@ -1627,12 +1630,14 @@ select:focus { outline: none; border: none; }
 .blog-meta li:last-child:after { display: none; }
 .blog-meta li a { margin-bottom: 4px; color: #7a0fff; }
 .blog-meta li a:hover { color: #46bdf4; }
-.blog-title { margin-top: 0; }
+.blog-title {padding: 24px 30px; margin-top: 0; }
+
+
 .blog-title h5 { font-size: 1.2em; line-height: 1.67; margin-bottom: 12px; }
 .blog-title h3 { font-size: 2em; line-height: 1.67; margin-bottom: 12px; }
 .blog-title a { color: #000; }
 .blog-title h4 { color: #fff; }
-.blog-title p { color: #000; }
+.blog-title p { color: #8284a5; }
 .blog-title a:hover { color: #0330CD; }
 .blog-tags { margin: 40px -5px 0; }
 .blog-tags li { display: inline-block; margin: 5px; }
