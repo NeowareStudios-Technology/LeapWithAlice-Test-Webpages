@@ -1644,6 +1644,7 @@ select:focus {
 
 #animatedHeader {
  z-index: -1; 
+ position: absolute;
 
 }
 
