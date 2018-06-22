@@ -1,7 +1,7 @@
 /*!
 Template :	ICO Crypto @by Softnio - RTL Version
-Version	 :	1.2.4
-Updated	 :	06.13.2018
+Version  :  1.2.1
+Updated	 :	04.28.2018
 */
 .is-rtl { text-align: right; }
 .is-rtl .text-left { text-align: right !important; }
@@ -38,7 +38,7 @@ Updated	 :	06.13.2018
 .is-rtl .sidebar-section { margin-right: 35px; margin-left: 0; }
 .is-rtl .sidebar-widget.category ul li { padding-left: 0; padding-right: 22px; }
 .is-rtl .sidebar-widget.category ul li:before { left: auto; right: 0; }
-.is-rtl .inline-form .input-round { padding-left: 0; padding-right: 30px; text-align: right; }
+.is-rtl .inline-form .input-round { padding-left: 0; padding-right: 30px; }
 .is-rtl .inline-form .btn { left: 5px; right: auto; }
 .is-rtl .footer-subscription { margin-left: 90px; margin-right: -30px; }
 .is-rtl .footer-subscription .input-round { padding-left: 0; padding-right: 15px; }
@@ -167,44 +167,4 @@ Updated	 :	06.13.2018
   .is-rtl .about-section-innr { padding: 50px 0 90px 0; }
   .is-rtl .about-image { border-radius: 30px 30px 30px 100px; }
   .is-rtl.theme-lavendar .navbar-btns { margin: 0 20px 30px 0; } }
-.is-rtl .header-angle-bg, .is-rtl .section-bg-angle { transform: skewY(-17deg); }
-.is-rtl .overlay-bubble div { transform: skewY(17deg); }
-.is-rtl .text-lg-left { text-align: right !important; }
-.is-rtl .text-box { padding-left: 30px; padding-right: 0; }
-.is-rtl .text-box.text-box-bg { padding: 40px 30px; }
-
-@media only screen and (max-width: 1024px) { .is-rtl .section-bg-angle { transform: skewY(10deg); }
-  .is-rtl .header-bg-angle { transform: skewY(10deg); }
-  .is-rtl .overlay-bubble { transform: scale(0.5) skewY(-10deg); }
-  .is-rtl .overlay-bubble div { transform: skewY(-10deg); } }
-.is-rtl .features-item-s2:before { left: auto; right: 31px; }
-.is-rtl .features-icon-s2 { margin-right: 0; margin-left: 35px; }
-.is-rtl .text-block ol li { padding-left: 0; padding-right: 65px; }
-.is-rtl .text-block ol li:before { left: auto; right: 25px; }
-.is-rtl .problem-item { padding: 32px 0; }
-.is-rtl .problem-item ul li { padding-left: 0; padding-right: 35px; }
-.is-rtl .problem-item ul li:before { left: auto; right: 15px; }
-.is-rtl .problem-icon { margin-left: 30px; margin-right: 0; }
-.is-rtl .timeline-content:before { right: -24px; left: auto; }
-.is-rtl .timeline-content:after { right: -24px; left: auto; }
-.is-rtl .timeline-content-left:before, .is-rtl .timeline-content-left:after { left: -25px; right: auto; }
-
-@media (min-width: 768px) { .is-rtl .text-md-right { text-align: left !important; } }
-.is-rtl .text-left { text-align: right !important; }
-.is-rtl .input-checkbox + label, .is-rtl .input-radio + label { padding: 5px 24px 5px 0; }
-.is-rtl .input-checkbox + label:before, .is-rtl .input-radio + label:before { left: auto; right: 0; }
-.is-rtl .input-border-simple + [class*="fa-"] { left: auto; right: 0; }
-.is-rtl .user-graphics { margin: -45px 20px 0 -35px; }
-.is-rtl .user-pro-info { border-radius: 0 6px 6px 0; margin-left: -20px; margin-right: 0; }
-.is-rtl .user-pro-info:before { left: 0; right: auto; transform: translate(-230px, -14.28%); }
-.is-rtl .user-pro-info:after { transform: rotate(180deg); left: auto; right: 0; }
-.is-rtl .user-pro-info .language-switcher { left: auto; right: 12px; }
-.is-rtl .user-pro-box-s2 { padding: 26px 30px 26px 56px; }
-.is-rtl .user-pro-box-s2 .user-pro-form { margin-left: 0; margin-right: 40px; }
-.is-rtl .user-pro-box-s2 .user-pro-info:after { top: auto; bottom: -26px; left: auto; right: -31px; transform: rotate(180deg); }
-.is-rtl .user-pro-box-s2 .user-pro-info .language-switcher { left: auto; right: -15px; }
-
-@media only screen and (max-width: 991px) { .is-rtl .user-graphics { margin: 0; }
-  .is-rtl .user-pro-box-s2 { padding: 10px; }
-  .is-rtl .user-pro-box-s2 .user-pro-form { margin-left: 0; margin-right: 0; } }
 /* End */

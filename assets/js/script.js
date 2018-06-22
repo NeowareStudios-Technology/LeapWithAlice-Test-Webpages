@@ -1,4 +1,4 @@
-/* Template	:	ICO Crypto v1.2.4 */
+/* Template	:	ICO Crypto v1.2.0 */
 (function($){
 	'use strict';
 	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
@@ -120,7 +120,7 @@
 		}
 	});
 	
-	//Carousel Time Line
+	//Carousel
 	var $timeline_carousel = $('.timeline-carousel');
 	if ($timeline_carousel.length > 0 ) {
 		var c_rtl = ($body_m.hasClass('is-rtl')) ? true : false;
@@ -151,7 +151,7 @@
 		});
 	}
 	
-	//Carousel Roadmap
+	//Carousel
 	var $roadmap_carousel = $('.roadmap-carousel');
 	if ($roadmap_carousel.length > 0 ) {
 		var c_rtl_r = ($body_m.hasClass('is-rtl')) ? true : false;
@@ -161,38 +161,6 @@
 			dost:true,
 			margin:30,
 			rtl: c_rtl_r,
-			responsive:{
-				0 : {
-					items:1,
-				},
-				400 : {
-					items:2,
-					center:false,
-				},
-				599 : {
-					items:3,
-				},
-				1024 : {
-					items:4,
-				},
-				1170 : {
-					items:5,
-				}
-			}
-		});
-	}	
-	
-	//Carousel Roadmap
-	var $roadmap_carousel_withnav = $('.roadmap-carousel-withnav');
-	if ($roadmap_carousel_withnav.length > 0 ) {
-		var c_rtl_rn = ($body_m.hasClass('is-rtl')) ? true : false;
-		$roadmap_carousel_withnav.addClass('owl-carousel').owlCarousel({
-			navText: ["<i class='ti ti-angle-left'></i>","<i class='ti ti-angle-right'></i>"],
-			items:5,
-			nav:true,
-			dost:false,
-			margin:30,
-			rtl: c_rtl_rn,
 			responsive:{
 				0 : {
 					items:1,
@@ -430,20 +398,10 @@
 			autoplayHoverPause:true
 		});
 	}
-    
-    // accordian
-	var $card = $('.card');
-	if ($card.length > 0) {
-		$card.each(function(){
-			var $cha = $('.card-header a');
-			$cha.on('click', function(){
-                var $this = $(this);
-                $this.parent().parent().parent().parent().find($card).removeClass('active');
-				$this.parent().parent().parent().addClass('active');
-			});
-		});
-	}
-    
+	
+/******************************************************************************
+*                   NEW HEADER IMAGE ANIMATION                                *
+*******************************************************************************/
 var animation = bodymovin.loadAnimation({
 	container: document.getElementById('animatedHeader'),
 	renderer: 'svg',
@@ -451,7 +409,11 @@ var animation = bodymovin.loadAnimation({
 	autoplay: true,
 	path: 'assets/js/data.json'
 })
-    
+
+
+
+
+
 	// particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
@@ -460,14 +422,14 @@ var animation = bodymovin.loadAnimation({
         {
 		"particles": {
 			"number": {
-				"value": 50,
+				"value": 40,
 				"density": {
 					"enable": true,
-					"value_area": 800
+					"value_area": 400
 				}
 			},
 			"color": {
-				"value": "#00c0fa"
+				"value": ["#ef3f45","#ee6b47","#eeaa4c","#44f299","#4e8fed"]
 			},
 			"shape": {
 				"type": "circle",
@@ -486,7 +448,7 @@ var animation = bodymovin.loadAnimation({
 				}
 			},
 			"opacity": {
-				"value": 0.30,
+				"value": 1,
 				"random": false,
 				"anim": {
 					"enable": false,
@@ -506,22 +468,22 @@ var animation = bodymovin.loadAnimation({
 				}
 			},
 			"line_linked": {
-				"enable": true,
+				"enable": false,
 				"distance": 150,
 				"color": "#2b56f5",
-				"opacity": 0.50,
+				"opacity": 0.30,
 				"width": 1.3
 			},
 			"move": {
 				"enable": true,
-				"speed": 6,
-				"direction": "none",
+				"speed": 2,
+				"direction": "bottom-right",
 				"random": false,
 				"straight": false,
 				"out_mode": "out",
-				"bounce": false,
+				"bounce": true,
 				"attract": {
-					"enable": false,
+					"enable": true,
 					"rotateX": 600,
 					"rotateY": 1200
 				}
@@ -531,11 +493,11 @@ var animation = bodymovin.loadAnimation({
 			"detect_on": "canvas",
 			"events": {
 				"onhover": {
-					"enable": true,
+					"enable": false,
 					"mode": "repulse"
 				},
 				"onclick": {
-					"enable": true,
+					"enable": false,
 					"mode": "push"
 				},
 				"resize": true
@@ -568,11 +530,8 @@ var animation = bodymovin.loadAnimation({
 		},
 			"retina_detect": true
 		}
-		// Stop here.
       );
 	}
-
-
-
-	
 })(jQuery);
+
+

@@ -1,8 +1,8 @@
 /*!
 Template :	ICO Crypto @by Softnio
 Preset   :	Ruby
-Version	 :	1.2.4
-Updated	 :	06.13.2018
+Version	 :	1.2.1
+Updated	 :	04.28.2018
 */
 h1.color-secondary, h2.color-secondary, h3.color-secondary, h4.color-secondary, h5.color-secondary, h6.color-secondary, .h1.color-secondary, .h2.color-secondary, .h3.color-secondary, .h4.color-secondary, .h5.color-secondary, .h6.color-secondary { color: #1511b1; }
 h1.color-primary, h2.color-primary, h3.color-primary, h4.color-primary, h5.color-primary, h6.color-primary, .h1.color-primary, .h2.color-primary, .h3.color-primary, .h4.color-primary, .h5.color-primary, .h6.color-primary { color: #f6388a; }
@@ -329,101 +329,6 @@ a:hover, a:focus, a:active { color: #554fff; }
 .footer-lavendar { background: #f6388a; }
 
 .social-bar li a { color: #f6388a; }
-
-.theme-muscari { background: #fff; }
-.theme-muscari .countdown-box { background: #1511b1; }
-.theme-muscari .countdown-box h6 { color: #fff !important; }
-.theme-muscari .countdown-box .countdown-time { color: #fff; }
-.theme-muscari .countdown-box .countdown-text { color: rgba(255, 255, 255, 0.6); }
-.theme-muscari .countdown-box.countdown-transparent { background: rgba(10, 8, 84, 0.8) !important; }
-.theme-muscari .token-status-point::after { background: rgba(255, 255, 255, 0.5); }
-.theme-muscari .token-status-percent { background: #554fff; }
-.theme-muscari .loader-section { background: #fcfcfc; }
-.theme-muscari .btn { background: #1511b1; border-radius: 4px; }
-.theme-muscari .btn:hover { background: #f6388a; }
-.theme-muscari .btn:before { display: none; }
-.theme-muscari .btn.btn-alt { background: #f6388a; }
-.theme-muscari .btn.btn-alt:hover { background: #554fff; }
-.theme-muscari .btn.btn-plane { background: #fff; color: #1511b1; }
-.theme-muscari .btn.btn-plane:hover { color: #fff; background: #f6388a; }
-.theme-muscari .btn.btn-simple { background: none; color: #fff; }
-.theme-muscari .btn.btn-simple .fa { color: #f6388a; }
-.theme-muscari .btn.btn-white { background: #fff; color: #1511b1; }
-.theme-muscari .btn.btn-white:hover { background: #f6388a; color: #fff; }
-.theme-muscari .btn.btn-outline { background: transparent; border: 2px solid #f6388a; }
-.theme-muscari .btn.btn-outline:after { background: transparent; }
-.theme-muscari .btn.btn-outline:hover { background: #f6388a; }
-.theme-muscari .site-header.has-fixed .navbar { background: #fff; box-shadow: 0 10px 40px rgba(93, 70, 232, 0.15); }
-.theme-muscari .site-header.has-fixed .navbar-nav > li > a { color: #8484a4; }
-.theme-muscari .site-header.has-fixed .navbar .btn.btn-outline { border-color: #1511b1; color: #1511b1; }
-.theme-muscari .navbar-toggler { background: #f6388a; }
-.theme-muscari .section-bg-light .small-heading, .theme-muscari [class*=section-bg-light] .small-heading { color: rgba(21, 17, 177, 0.5); }
-.theme-muscari .section-bg-muscari .text-block ul:not(.btns) li { color: #fff; }
-.theme-muscari .section-bg-muscari .text-block ul:not(.btns) li:before { background: #f6388a; }
-.theme-muscari .section-muscari { background: #1511b1; }
-.theme-muscari .text-block { color: #374574; }
-.theme-muscari .text-block p:not(.lead) { color: #637097; }
-.theme-muscari .roadmap-carousel-withnav:before, .theme-muscari .roadmap-carousel-withnav:after { background: #e22ad4; }
-.theme-muscari .roadmap-carousel-container:before { background: #e22ad4; }
-.theme-muscari .roadmap-item h6:before { background: rgba(123, 17, 115, 0.3); }
-.theme-muscari .roadmap-item h6:after { background: #7b1173; }
-.theme-muscari .roadmap-done h6:before { background: rgba(21, 17, 177, 0.3); }
-.theme-muscari .roadmap-done h6:after { background: #1511b1; }
-.theme-muscari .team-member { background: rgba(123, 17, 115, 0.1); }
-.theme-muscari .team-member .team-social li a { color: #554fff; }
-.theme-muscari .team-member .team-social li a:hover { color: #f6388a; }
-.theme-muscari .team-member .team-title { color: #1511b1; }
-.theme-muscari .team-member .team-photo:before { background: rgba(21, 17, 177, 0.4); }
-.theme-muscari .team-member .team-photo:after { background: #f6388a; }
-.theme-muscari .copyright-text { color: #fff; }
-.theme-muscari .copyright-text span { color: rgba(255, 255, 255, 0.6); }
-.theme-muscari .copyright-text a { color: #fff; }
-.theme-muscari .copyright-text a:hover { color: #f6388a; }
-.theme-muscari .footer-subscription .input-round { color: #fff; background: rgba(85, 79, 255, 0.5); border-color: transparent; }
-.theme-muscari .social li a { color: #1511b1; background: #fff; }
-.theme-muscari .social li a:hover { color: #fff; background: #f6388a; }
-.theme-muscari .link-widget li a, .theme-muscari .footer-links li a { color: rgba(255, 255, 255, 0.6); }
-.theme-muscari .link-widget li a:hover, .theme-muscari .footer-links li a:hover { color: #fff; }
-
-.header-angle-bg { background: #1511b1; }
-
-.section-head-s5 .section-title:after { background: #554fff; }
-.section-bg-muscari .section-head-s5 .section-title:after { background: #f6388a; }
-
-.text-box h6 { color: #f6388a !important; }
-.text-box.text-box-bg { background: rgba(0, 0, 0, 0.2); }
-
-.roadmap-carousel-withnav .owl-prev, .roadmap-carousel-withnav .owl-next { color: rgba(21, 17, 177, 0.3); }
-
-.section-bg-light .tab-custom-s2 .nav-tabs li > a { opacity: 1; color: #637097; }
-.section-bg-light .tab-custom-s2 .nav-tabs li > a.active { color: #1511b1; border-bottom-color: #1511b1; }
-
-.section-bg-light .form-message .input-field .input-line, .section-bg-light-alt .form-message .input-field .input-line { color: #637097; border-bottom-color: rgba(204, 212, 255, 0.6); }
-.section-bg-light .form-message .input-field .input-title, .section-bg-light-alt .form-message .input-field .input-title { color: rgba(21, 17, 177, 0.5); }
-
-.section-bg-light .contact-info-alt li .fa { color: #1511b1; background: #1511b1; }
-.section-bg-light .contact-info-alt li .fa:after { background: #fff; }
-
-.section-bg-light-alt .contact-info-alt li .fa { color: #1511b1; background: #1511b1; }
-.section-bg-light-alt .contact-info-alt li .fa:after { background: #f7f8ff; }
-
-.play-btn-s2 { background: linear-gradient(to right, #7b1173 0%, #f6388a 100%); }
-.play-icon { background: linear-gradient(to right, #7b1173 0%, #f6388a 100%); }
-
-.features-item-s2:before { background: #7b1173; }
-.features-icon-s2 { background: linear-gradient(to right, #7b1173 0%, #f6388a 100%); }
-
-.text-block ol li:before { color: #f6388a; }
-
-.problem-item ul li:before { background: #f6388a; }
-
-.timeline-list:before { background: linear-gradient(to bottom, #f6388a 0%, #1511b1 100%); }
-.timeline-content:before { border-color: #f6388a; background: #f6388a; }
-.timeline-content h6 { color: #f6388a; }
-
-.team-circle-social li a { color: #f6388a; }
-.team-circle-social li a:hover { color: #7b1173; }
-
-.io-lobelia .sub-heading { color: #f6388a; }
+/*! Write Your OWN CODE HERE */
 
 /*! END */
