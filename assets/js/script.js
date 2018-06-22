@@ -444,6 +444,14 @@
 		});
 	}
     
+var animation = bodymovin.loadAnimation({
+	container: document.getElementById('animatedHeader'),
+	renderer: 'svg',
+
+	autoplay: true,
+	path: 'assets/js/data.json'
+})
+    
 	// particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
@@ -565,12 +573,6 @@
 	}
 
 
-var animation = bodymovin.loadAnimation({
-	container: document.getElementById('animatedHeader'),
-	renderer: 'svg',
 
-	autoplay: true,
-	path: 'assets/js/data.json'
-})
 	
 })(jQuery);
