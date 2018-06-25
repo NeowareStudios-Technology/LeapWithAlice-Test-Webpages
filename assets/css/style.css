@@ -608,6 +608,33 @@ hr, .hr {
   .section-pad.section-fix {
     margin-bottom: -30px; }
 
+
+
+.section-pad-lwa {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .section-pad-lwa-xs {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .section-pad-lwa-sm {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .section-pad-lwa-md {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+  .section-pad-lwa-lg {
+    padding-top: 180px;
+    padding-bottom: 180px; }
+  .section-pad-lwa.nopd {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .section-pad-lwa.nopb {
+    padding-bottom: 0; }
+  .section-pad-lwa.nopt {
+    padding-top: 0; }
+  .section-pad-lwa.section-fix {
+    margin-bottom: -30px; }
+
 .section-overup[class*="section-pad"] {
   margin-top: -90px;
   padding-top: 0; }
