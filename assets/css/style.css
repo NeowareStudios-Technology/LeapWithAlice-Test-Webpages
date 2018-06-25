@@ -389,16 +389,6 @@ h1, h2, h3, h4, h5, h6, blockquote {
     height: 100%;
     left: 0; }
 
-
-
-.video-box-s2 { position: relative; }
-.video-box-s2 img { border-radius: 0; width: 100%; max-width: 100%; }
-.video-box-s2:before { position: absolute; left: 0; top: 0; height: 100%; width: 100%; content: ''; background: rgba(0, 5, 55, 0.6); }
-
-
-
-
-
 .panel-group .panel {
   border-radius: 0;
   box-shadow: none;
@@ -1996,6 +1986,8 @@ select:focus {
       .header-image-element-2 {
         left: 33%;
         bottom: 30%; }
+
+
 
   .theme-light .banner.banner-curb.banner-particle, .banner.banner-curb.banner-particle {
     background-size: 150%,75%,75%,auto;
@@ -6712,7 +6704,6 @@ select:focus {
   .io-lobelia .footer-scetion {
     padding: 0 0 60px; } }
 @media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
-  .section .video-box-s2 img { max-width: 100%; }
   .section:not(.team-section) img,
   .section:not(.blog-section) img {
     width: 100%; }
@@ -6741,4 +6732,8 @@ select:focus {
 
   .subscription-form .input-round {
     text-align: center; } }
+
+header-image-video {
+ padding: 70px;
+ }
 /** END */
