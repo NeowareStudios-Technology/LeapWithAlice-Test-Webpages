@@ -25,13 +25,38 @@
 
 
 <!-- Start of leapwithalice google translate script -->
-<div id="google_translate_element"></div>
 <script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,es,jv,ko,pa,pt,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');}
-</script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+
+	function triggerHtmlEvent(element, eventName) {
+	  var event;
+	  if (document.createEvent) {
+		event = document.createEvent('HTMLEvents');
+		event.initEvent(eventName, true, true);
+		element.dispatchEvent(event);
+	  } else {
+		event = document.createEventObject();
+		event.eventType = eventName;
+		element.fireEvent('on' + event.eventType, event);
+	  }
+	}
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+  </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div id="google_translate_element"></div><script type="text/javascript"></script>
+
+
+
 <!-- End of leapwithalice google translate script -->
 
 
@@ -100,22 +125,37 @@ function googleTranslateElementInit() {
 					</div>
             </li>
 
-            <div id="google_translate_element"></div><script type="text/javascript"></script>
 
-				<li class="nav-item lang-switch">
-					<a class="nav-link btn btn-white btn-sm menu-link" href="#" data-toggle="dropdown"><img class="lang-flag" src="images/flag-en.jpg" alt="">EN <em class="ti ti-angle-down"></em></a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="#"><img class="lang-flag" src="images/flag-en.jpg" alt="">EN</a>
-						<a class="dropdown-item" href="#"><img class="lang-flag" src="images/flag-fr.jpg" alt="">FR</a>
-						<a class="dropdown-item" href="#"><img class="lang-flag" src="images/flag-ch.jpg" alt="">CH</a>
-						<a class="dropdown-item" href="#"><img class="lang-flag" src="images/flag-br.jpg" alt="">BR</a>
-					</div>
-				</li>
+
+<li class="ct-language">Language <i class="fa fa-arrow-down"></i>
+		<ul class="list-unstyled ct-language__dropdown">
+		  <li><a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a></li>
+		  <li><a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a></li>
+		  <li><a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a></li>
+		  <li><a href="#googtrans(en|zh-CN)" class="lang-es lang-select" data-lang="zh-CN"><img src="https://www.solodev.com/assets/google-translate/flag-china.png" alt="CHINA"></a></li>
+		  <li><a href="#googtrans(en|ja)" class="lang-es lang-select" data-lang="ja"><img src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"></a></li>
+		</ul>
+	  </li>            
+		
 			</ul>
         </div>
       </nav>
     </div>
     <!-- End Navbar -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Banner/Slider -->
     <div id="header" class="banner banner-curb banner-full d-flex align-items-center">
@@ -256,7 +296,7 @@ function googleTranslateElementInit() {
    <!-- Start Section -->
   <div class="section no-pt section-bg-AliceSuite">
     <div class="container">
-      <div class="row text-center">
+      <div class=" text-center">
         <div class="col-md-8 offset-md-2">
           <div class="section-head">
             <h2 class="section-title animated" data-animate="fadeInUp" data-delay="0">The Alice Suite
@@ -265,10 +305,11 @@ function googleTranslateElementInit() {
           </div>
         </div>
       </div>
-      <div class="solution-list text-center">
+      <div class="solution-list text-center" >
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="solution-item animated" data-animate="fadeInUp" data-delay=".2">
+          
+          <div class=" col-md-6 col-lg-3" hspace="20">
+            <div class=" animated" data-animate="fadeInUp" data-delay=".2">
               <div class="solution-icon">
                 <img src="images/AliceLabs.png" alt="icon">
               </div>
@@ -276,7 +317,9 @@ function googleTranslateElementInit() {
               <p>Easily create free educational content, enhanced by AR.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+
+
+          <div class=" col-md-6 col-lg-3">
             <div class="solution-item animated" data-animate="fadeInUp" data-delay=".3">
               <div class="solution-icon">
                 <img src="images/AliceLens.png" alt="icon">
@@ -285,7 +328,9 @@ function googleTranslateElementInit() {
               <p>View augmented creations and rediscover the world.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+
+
+          <div class=" col-md-6 col-lg-3">
             <div class="solution-item animated" data-animate="fadeInUp" data-delay=".4">
               <div class="solution-icon">
                 <img src="images/AliceExchange.png" alt="icon">
@@ -294,7 +339,9 @@ function googleTranslateElementInit() {
               <p>Sell creations on an incentive driven Educator-to-Educator marketplace.</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+
+
+          <div class=" col-md-6 col-lg-3">
             <div class="solution-item animated" data-animate="fadeInUp" data-delay=".5">
               <div class="solution-icon">
                 <img src="images/AliceClassroom.png" alt="icon">
@@ -303,6 +350,8 @@ function googleTranslateElementInit() {
               <p>Dashboard detailing KPI's such as student growth and engagement.</p>
             </div>
           </div>
+
+
         </div><!-- .row  -->
       </div><!-- .problems-list  -->
     </div><!-- .container  -->
@@ -2641,7 +2690,6 @@ function googleTranslateElementInit() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js"></script>
     <script src="assets/js/jquery.bundle.js?ver=121"></script>
     <script src="assets/js/script.js?ver=121"></script>
-    <script src="assets/js/translate.js?ver=121"></script>
     <script src="assets/js/selection.json?ver=121"></script>
 
     <!-- Start of HubSpot Embed Code -->
