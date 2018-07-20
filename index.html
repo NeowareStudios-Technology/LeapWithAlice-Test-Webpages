@@ -2583,7 +2583,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
 
-            <form action="https://formspree.io/info@leapwithalice.io" method="POST" id="contact-form" class="form-message text-left contact-form">
+            <form method="POST" id="contact-form" class="form-message text-left contact-form">
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
                 <input id="name" name="name" type="text" class="form-control input-line required">
                 <label class="input-title"><font color="white">Your Name</font></label>
@@ -2758,6 +2758,39 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+<!--Begin Form Submit Script-->
+<script>
+$("#btn_submit").click(function(){
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          
+	  // Putting out values into the "data" for the PHP file to execute
+          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
+          
+	if(name==''||email==''||message=='') {
+            alert("Please fill out all fields");
+            return false;
+          } else {
+            // AJAX Code To Submit Form.
+            $.ajax({
+              type: "POST",
+              url: "contactFormSubmit.php",
+              data: dataString, // this is the data we send to the php form. see "var dataString" above
+              cache: false, //you don't want caching of identifying information
+	      
+	      // Returns successful data submission message when successfully executed.
+              success: function(result){
+                  alert(result);
+              }
+            });
+            return true;
+          }
+          return false;
+          });
+</script>
+<!--End Form Submit Script-->
 
 
 
