@@ -2778,6 +2778,7 @@ function formCheck(){
       
      
         $("#btn_submit").click(function(){
+	  formCheck();
           if (formCheck() == false){ // first verify there are no html tags in our name/message
 		  		     // php will validate email for us anyway, so no need to verify that.
 		   		     // also regex for emails aren't good. Don't use them.
@@ -2791,7 +2792,7 @@ function formCheck(){
           if(name==''||email==''||message=='') { // checking if fields are empty,
             alert("Please Fill All Fields");
             return false;
-          } else if (formCheck() == true) {
+          } else {
 		  
             // AJAX Code To Submit Form.
             $.ajax({
