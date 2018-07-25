@@ -2766,7 +2766,7 @@ function formCheck(){
         var checkMessage = $("#message").val();
         var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
         if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
-		// If our form "doesn't" match the regex ie. containing a <tag>:
+		// If our form doesn't match the regex ie. containing a <tag>, submit
             alert("Form Submitting...");
           return true;
         } else {
@@ -2778,34 +2778,35 @@ function formCheck(){
       
      
         $("#btn_submit").click(function(){
-	  formCheck();
           if (formCheck() == false){ // first verify there are no html tags in our name/message
 		  		     // php will validate email for us anyway, so no need to verify that.
 		   		     // also regex for emails aren't good. Don't use them.
-          return false;
+	  	alert("please correct the form");
+          	return false;
           } else {
-          var name = $("#name").val();
-          var email = $("#email").val();
-          var message = $("#message").val();
-          // Returns successful data submission message when message is being sent.
-          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
-          if(name==''||email==''||message=='') { // checking if fields are empty,
-            alert("Please Fill All Fields");
-            return false;
-          } else {
+	 	var name = $("#name").val();
+          	var email = $("#email").val();
+          	var message = $("#message").val();
+          	// Returns successful data submission message when message is being sent.
+          	var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
+          	if(name==''||email==''||message=='') { // checking if fields are empty,
+            		alert("Please Fill All Fields");
+            		return false;
+          	} else {
 		  
-            // AJAX Code To Submit Form.
-            $.ajax({
-              type: "POST", //Submits POST data
-              url: "contactFormSubmit.php", // Through this php form
-              data: dataString, // Submits our dataStringVariable
-              cache: false, // Don't cache important info
-              success: function(result){
-                  alert(result); // generate result based on php form
-              }
-            });
-            return true;
-          }
+            	// AJAX Code To Submit Form.
+	    	$.ajax({
+	      	  type: "POST", //Submits POST data
+	      	  url: "contactFormSubmit.php", // Through this php form
+	      	  data: dataString, // Submits our dataStringVariable
+	      	  cache: false, // Don't cache important info
+	      	  success: function(result){
+		    alert(result); // generate result based on php form
+	      	  }
+	    	});
+	     alert("sent!");
+             return true;
+           }
           return false;
           }
           });
