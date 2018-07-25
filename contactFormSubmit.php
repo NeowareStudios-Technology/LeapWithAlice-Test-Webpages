@@ -35,7 +35,7 @@ if ($contactError != "") {
  $headers;
 
 // fill in content with the info we want.
- $emailTo .= "info@leapwithalice.io";
+ $emailTo .= "starlimeweb@gmail.com";
  $subject .= "New Website Contact!";
  $content .= "Contact Name: ".$_POST['name']."\r\n";
  $content .= "Contact Message: ".$_POST['message']."\r\n";
