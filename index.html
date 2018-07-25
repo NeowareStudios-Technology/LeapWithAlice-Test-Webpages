@@ -2583,7 +2583,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
 
-            <form action="https://formspree.io/info@leapwithalice.io" method="POST" id="contact-form" class="form-message text-left contact-form">
+            <form method="POST" id="contact-form" class="form-message text-left contact-form">
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
                 <input id="name" name="name" type="text" class="form-control input-line required">
                 <label class="input-title"><font color="white">Your Name</font></label>
@@ -2758,6 +2758,60 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+<!--Begin Form Submit Script-->
+<script>
+function formCheck(){
+        var checkName = $("#name").val();
+        var checkMessage = $("#message").val();
+        var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
+        if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
+		// If our form "doesn't" match the regex ie. containing a <tag>:
+            alert("Form Submitting...");
+          return true;
+        } else {
+	    // else the name or message contains an html <tag> and we deny the request to submit it.
+            alert("There were errors in your form! Please try again.");
+            return false;
+        }
+      }
+      
+     
+        $("#btn_submit").click(function(){
+          if (formCheck() == false){ // first verify there are no html tags in our name/message
+		  		     // php will validate email for us anyway, so no need to verify that.
+		   		     // also regex for emails aren't good. Don't use them.
+          return false;
+          } else {
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          // Returns successful data submission message when message is being sent.
+          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
+          if(name==''||email==''||message=='') { // checking if fields are empty,
+            alert("Please Fill All Fields");
+            return false;
+          } else {
+		  
+            // AJAX Code To Submit Form.
+            $.ajax({
+              type: "POST", //Submits POST data
+              url: "contactFormSubmit.php", // Through this php form
+              data: dataString, // Submits our dataStringVariable
+              cache: false, // Don't cache important info
+              success: function(result){
+                  alert(result); // generate result based on php form
+              }
+            });
+            return true;
+          }
+          return false;
+          }
+          });
+	  });
+</script>
+<!--End Form Submit Script-->
+<!--End Form Submit Script-->
 
 
 
