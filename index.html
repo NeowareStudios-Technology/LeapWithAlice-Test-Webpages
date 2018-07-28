@@ -119,14 +119,11 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
           <a class="dropdown-item lang-es lang-select" data-lang="ja" href="#googtrans(en|hi)"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"> -->Hindi</a>
           <a class="dropdown-item lang-es lang-select" data-lang="ja" href="#googtrans(en|ar)">Arabic</a>
         </div>
-            </li>
-<!--             
+	</li> 
           </ul>
-
-
-          <ul class="navbar-btns animated remove-animation" data-animate="fadeInDown" data-delay=".85">
+  	  <ul class="navbar-btns animated remove-animation" data-animate="fadeInDown" data-delay=".85">
            
- -->
+
             <li class="nav-item dropdown navbar-btns animated remove-animation">
               <a class="nav-link dropdown-toggle col-sm-2 col-lg-12 btn btn-white btn-sm menu-link" href="#" data-toggle="dropdown">Whitepaper&nbsp;&nbsp;<em class="ti ti-angle-down"></em> </a>
               <div class="dropdown-menu">
@@ -2792,39 +2789,39 @@ function formCheck(){
       }
       
      
-        $("#btn_submit").click(function(){
-          if (formCheck() == false){ // first verify there are no html tags in our name/message
-		  		     // php will validate email for us anyway, so no need to verify that.
-		   		     // Regex for emails aren't good. Don't use them.
-	  	alert("please correct the form");
-          	return false;
+        $("#btn_submit").click(function(e){
+          e.preventDefault(); // don't allow to submit on default
+          if (formCheck() == false){
+          return false;
           } else {
-	 	var name = $("#name").val();
-          	var email = $("#email").val();
-          	var message = $("#message").val();
-          	// Returns successful data submission message when message is being sent.
-          	var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
-          	if(name==''||email==''||message=='') { // checking if fields are empty,
-            		alert("Please Fill All Fields");
-            		return false;
-          	} else {
-		  
-            	// AJAX Code To Submit Form.
-	    	$.ajax({
-	      	  type: "POST", //Submits POST data
-	      	  url: "http://starlimeweb-com.stackstaging.com/test/contactFormSubmit.php", // Through this php form
-	      	  data: dataString, // Submits our dataStringVariable
-	      	  cache: false, // Don't cache important info
-	      	  success: function(result){
-		    alert(result); // generate result based on php form
-	      	  }
-	    	});
-	     alert("sent!");
-             return true;
-           }
+            var frm = document.getElementsByName('contact-form')[0];
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          var error = "";
+          // Returns successful data submission message when the entered information is stored in database.
+          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
+          if(name==''||email==''||message=='') {
+            $(".error").show().html("Please fill in all of the fields!");
+            return false;
+          } else {
+            // AJAX Code To Submit Form.
+            $.ajax({     
+              type: "POST",
+              url: "contactFormSubmit.php",
+              data: dataString,
+              cache: false,
+              success: function(result){
+                  //$(".loader").show(); // if successful, show a "loader"
+		      alert("sent!");
+                 frm.reset(); // reset form to not allow multiple submissions
+              }
+            });
+          }
           return false;
           }
           });
+	  });
 </script>
 <!--End Form Submit Script-->
 <!--End Form Submit Script-->
