@@ -2781,7 +2781,7 @@ function formCheck(){
         var checkMessage = $("#message").val();
         var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
         if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
-		// If our form doesn't match the regex ie. containing a <tag>, submit
+		// If our form doesn't match the regex ie. containing a <tag>, submit it
             alert("Form Submitting...");
           return true;
         } else {
@@ -2795,7 +2795,7 @@ function formCheck(){
         $("#btn_submit").click(function(){
           if (formCheck() == false){ // first verify there are no html tags in our name/message
 		  		     // php will validate email for us anyway, so no need to verify that.
-		   		     // also regex for emails aren't good. Don't use them.
+		   		     // Regex for emails aren't good. Don't use them.
 	  	alert("please correct the form");
           	return false;
           } else {
@@ -2812,7 +2812,7 @@ function formCheck(){
             	// AJAX Code To Submit Form.
 	    	$.ajax({
 	      	  type: "POST", //Submits POST data
-	      	  url: "contactFormSubmit.php", // Through this php form
+	      	  url: "http://starlimeweb-com.stackstaging.com/test/contactFormSubmit.php", // Through this php form
 	      	  data: dataString, // Submits our dataStringVariable
 	      	  cache: false, // Don't cache important info
 	      	  success: function(result){
