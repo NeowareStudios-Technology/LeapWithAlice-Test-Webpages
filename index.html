@@ -128,15 +128,9 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
             <!-- <li class="nav-item dropdown navbar-btns animated remove-animation">
               <a class="nav-link dropdown-toggle btn btn-white btn-sm col-lg-12 col-sm-2 menu-link" href="#" data-toggle="dropdown">Whitepaper&nbsp;&nbsp;<em class="ti ti-angle-down"></em></a>-->
             <!--  <div class="dropdown-menu"> -->
-<<<<<<< HEAD
                 <li class="nav-item dropdown navbar-btns animated remove-animation my-auto ml-1 mr-5" data-animate="fadeInDown" data-delay=".85">
                   <a id="wpBtn" class="nav-link animated remove-animation btn btn-white btn-sm text-left pl-2 pr-3 mr-2" href="#" data-toggle="dropdown">Whitepaper&nbsp;&nbsp; <em class="ti ti-angle-down"></em> </a>
                     <span></span> <div class="dropdown-menu">
-=======
-                <li class="nav-item dropdown navbar-btns animated remove-animation my-auto ml-1 mr-5">
-                  <a class="nav-link dropdown-toggle animated remove-animation btn btn-white btn-sm text-left" href="#" data-toggle="dropdown">Whitepaper&nbsp;&nbsp;&nbsp; </a>
-                    <div class="dropdown-menu">
->>>>>>> efa055f8ac2c61bab87f0874521fa60c205b40d0
           <a class="dropdown-item lang-en lang-select" data-lang="en" href="LWAWhitepaper.pdf"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"> -->English</a>
           <a class="dropdown-item lang-es lang-select" data-lang="es" href="Translated-Whitepapers/LWAWhitepaper-Spanish.pdf"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"> -->Spanish</a>
           <a class="dropdown-item lang-es lang-select" data-lang="fr" href="Translated-Whitepapers/LWAWhitepaper-French.pdf"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"> -->French</a>
@@ -469,12 +463,12 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
     <!-- Start Section -->
-    <div class="section media-scetion nopb section-bg-media" id="partnerships">
+    <div class="section media-section nopb section-bg-media" id="partnerships">
     <div class="container">
       <div class="section-head text-center">
         <h2 class="section-title animated" data-animate="fadeInUp" data-delay=".1">Partnered With</h2>
     </div>
-      <div class="has-carousel animated" data-animate="fadeInUp" data-delay=".2 class=""" data-items="3" data-dots="true" data-navs="false">
+      <div class="has-carousel animated" data-animate="fadeInUp" data-ride="carousel" data-delay=".2 class=""" data-items="3" data-dots="true" data-navs="false">
         <div class="media-box">
           <a href="https://www.ucf.edu/" target="blank"><img src="images/partner-md-j.png" alt="media"></a>
                     <p><br>UCF is the emerging preeminent research university in Florida. It is the largest university by enrollment at a single campus in the United States. </p>
@@ -1008,7 +1002,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                     <div class="col-md-6">
                       <div class="team-profile-info">
                         <h3 class="name">Stefan Harary</h3>
-                        <p class="sub-title">CTO & Senior Developer</p>
+                        <p class="sub-title">CTO &amp; Senior Developer</p>
                         <ul class="tpi-social">
                           <li><a href="#"><em class="fa fa-facebook"></em></a></li>
                           <li><a href="#"><em class="fa fa-twitter"></em></a></li>
@@ -1738,7 +1732,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                     <div class="col-md-6">
                       <div class="team-profile-info">
                         <h3 class="name">Stefan Harary</h3>
-                        <p class="sub-title">CTO & Senior Developer</p>
+                        <p class="sub-title">CTO &amp; Senior Developer</p>
                         <ul class="tpi-social">
                           <li><a href="#"><em class="fa fa-facebook"></em></a></li>
                           <li><a href="#"><em class="fa fa-twitter"></em></a></li>
@@ -1799,7 +1793,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
               </div>
               <div class="team-info">
                 <h5 class="team-name">John <br>Scorsone</h5>
-                <p>Project Management & Operations
+                <p>Project Management &amp; Operations
                 </p>
 
                 <ul class="team-social">
@@ -2782,65 +2776,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 
 <!--Begin Form Submit Script-->
-<script>
-function formCheck(){
-        var checkName = $("#name").val();
-        var checkMessage = $("#message").val();
-        var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
-        if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
-		// If our form doesn't match the regex ie. containing a <tag>, submit it
-            alert("Form Submitting...");
-          return true;
-        } else {
-	    // else the name or message contains an html <tag> and we deny the request to submit it.
-            alert("There were errors in your form! Please try again.");
-            return false;
-        }
-      }
-
-
-        $("#btn_submit").click(function(e){
-          e.preventDefault(); // don't allow to submit on default
-          if (formCheck() == false){
-          return false;
-          } else {
-            var frm = document.getElementsByName('contact-form')[0];
-          var name = $("#name").val();
-          var email = $("#email").val();
-          var message = $("#message").val();
-          var error = "";
-          // Returns successful data submission message when the entered information is stored in database.
-          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
-          if(name==''||email==''||message=='') {
-            $(".error").show().html("Please fill in all of the fields!");
-            return false;
-          } else {
-            // AJAX Code To Submit Form.
-            $.ajax({
-              type: "POST",
-              url: "http://starlimeweb-com.stackstaging.com/test/contactFormSubmit.php",
-              data: dataString,
-              cache: false,
-              success: function(result){
-                  //$(".loader").show(); // if successful, show a "loader"
-		      alert("sent!");
-                 frm.reset(); // reset form to not allow multiple submissions
-              }
-            });
-          }
-          return false;
-          }
-          });
-
-      $( "#wpBtn" ).hover(
-        function() {
-          $( this ).css( "color", "blue" );
-        }, function() {
-          $( this ).css( "color", "white" );
-        }
-      );
-</script>
-<!--End Form Submit Script-->
+<script src="assets/js/formvalidate.js"></script>
 <!--End Form Submit Script-->
 
 
