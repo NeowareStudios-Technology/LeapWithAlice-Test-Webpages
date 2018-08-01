@@ -6541,13 +6541,20 @@ select:focus {
   margin-bottom: 20px; }
 
 @media only screen and (max-width: 767px) {
+  .problem-icon{
+    margin: 0 auto;
+  }
+  .problem-title{
+    text-align: center;
+    padding-top: 2vh;
+  }
   .problem-list {
-    padding: 30px 30px; } }
+    padding: 30px 30px; }
 .solution-list {
   margin-bottom: -75px; }
 .solution-item {
   padding-bottom: 5px;
-
+}
 }
 
 .solution-icon {
