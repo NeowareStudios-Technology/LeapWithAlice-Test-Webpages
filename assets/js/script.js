@@ -76,11 +76,11 @@
 			}
 		});
 
-		$dropdown_menu.on("click",function(e){
-			if ($win.width() < 991) {
+		$dropdown_menu.on("click",function(){
+			if ($win.width() < 991){
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
-				if ($('a').hasClass("wp-link")){
+				if ( $('a').hasClass("dropdown-item") ){
 					return true;
 				}
 			}
