@@ -65,19 +65,19 @@
 	if ($dropdown_menu.length > 0 ) {
 		$dropdown_menu.on("mouseover",function(){
 			if ($win.width() > 991) {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadeIn("400");
+				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().show();
 				$(this).addClass('open');
 			}
 		});
 		$dropdown_menu.on("mouseleave",function(){
 			if ($win.width() > 991) {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadeOut("400");
+				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().hide();
 				$(this).removeClass('open');
 			}
 		});
 		$dropdown_menu.on("click",function(){
 			if ($win.width() < 991) {
-				$(this).children('.dropdown-menu').fadeToggle(400);
+				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
 				return false;
 			}
@@ -200,16 +200,8 @@
 			var c_mgn = ($self.data('margin')) ? $self.data('margin') : 30;
 			$self.addClass('owl-carousel').owlCarousel({
 				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-				items: c_item,
-				loop: true,
-				nav: c_navs,
-				dots: c_dots,
-				margin: c_mgn,
-				center: c_ctr,
-				autoplay: true,
-				autoplayTimeout: 9000,
-				autoplaySpeed: 1000,
-				rtl: c_rtl_c,
+				items: c_item,loop: true,	nav: c_navs, dots: c_dots, margin: c_mgn, center: c_ctr,
+				autoplay: true, autoplayTimeout: 3000, autoplaySpeed: 1200, rtl: c_rtl_c,
 				responsive:{ 0:{ items:1 }, 480:{ items: c_item_m }, 768:{ items: c_item_t }, 1170:{ items: c_item } }
 			});
 		});
