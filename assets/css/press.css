@@ -1,0 +1,33 @@
+.second{
+  display:none;
+}
+
+.third{
+  display:none;
+}
+.blog-item{
+  border-radius: 100%!important;
+}
+
+.press-div{
+    border-radius: 100%;
+}
+
+.readmore-link{
+  font-size: 1em !important;
+}
+
+.readmore-link:hover{
+  background:white!important;
+  color:blue!important;
+  border: 1px solid blue!important;
+  width: auto;
+  margin: 0px 0px !important;
+  margin-bottom:-2px!important;
+  padding-bottom: 0px!important;
+}
+
+.blog-texts{
+  border-radius: 20px;
+  margin-top:-3vh;
+}
