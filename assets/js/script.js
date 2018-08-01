@@ -75,15 +75,22 @@
 				$(this).removeClass('open');
 			}
 		});
-		$dropdown_menu.on("click",function(){
+
+		$dropdown_menu.on("click",function(e){
 			if ($win.width() < 991) {
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
-				return false;
+				if ($('a').hasClass("wp-link")){
+					return true;
+				}
 			}
+			return false;
+		//	return false;
 		});
-
 	}
+
+
+
 	$win.on('resize', function() {
 		$('.navbar-collapse').removeClass('in');
 		$dropdown_menu.children('.dropdown-menu').fadeOut("400");
