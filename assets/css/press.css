@@ -29,4 +29,11 @@
 .blog-texts{
   border-radius: 20px;
   margin-top:-3vh;
+  text-align: left;
+}
+
+.blog-title{
+  text-align:left;
+  padding-left:0px;
+  padding-bottom: 2px!important;
 }
