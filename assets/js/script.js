@@ -414,14 +414,11 @@
 	*/
 	var count = 1;
 	$("#morePosts").on('click', function(){
-		//alert(count);
 		if(count>=1){
 			$(".second").show();
 		}
 		if(count>1){
 			$(".third").show();
-		}
-		if(count>2){
 			$("#morePosts").html("No More Posts");
 		}
 		count++;

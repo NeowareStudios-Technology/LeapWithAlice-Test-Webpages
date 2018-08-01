@@ -20,11 +20,10 @@
 .readmore-link:hover{
   background:white!important;
   color:blue!important;
-  border: 1px solid blue!important;
+  border: 1px solid blue;
   width: auto;
   margin: 0px 0px !important;
   margin-bottom:-2px!important;
-  padding-bottom: 0px!important;
 }
 
 .blog-texts{
