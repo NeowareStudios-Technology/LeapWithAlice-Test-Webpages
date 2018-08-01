@@ -191,29 +191,29 @@
 			var c_item = ($self.data('items')) ? $self.data('items') : 4;
 			var c_item_t = (c_item >= 3) ? 2 : c_item;
 			var c_item_m = (c_item_t >= 2) ? 1 : c_item_t;
-			var c_delay =($self.data('delay')) ? $self.data('delay') : 6000;
-			var c_auto =($self.data('autoplay')) ? true : false;
-			var c_loop =($self.data('loop')) ? true : false;
+		//	var c_delay =($self.data('delay')) ? $self.data('delay') : 2000;
+		//	var c_auto =($self.data('autoplay')) ? true : false;
+		//	var c_loop =($self.data('loop')) ? true : false;
 			var c_dots = ($self.data('dots')) ? true : false;
 			var c_navs = ($self.data('navs')) ? true : false;
 			var c_ctr = ($self.data('center')) ? true : false;
 			var c_mgn = ($self.data('margin')) ? $self.data('margin') : 30;
 			$self.addClass('owl-carousel').owlCarousel({
 				navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-				items: c_item, loop: c_loop, nav: c_navs, dots: c_dots, margin: c_mgn, center: c_ctr,
-				autoplay: c_auto, autoplayTimeout: c_delay, autoplaySpeed: 300, rtl: c_rtl_c,
+				items: c_item,
+				loop: true,
+				nav: c_navs,
+				dots: c_dots,
+				margin: c_mgn,
+				center: c_ctr,
+				autoplay: true,
+				autoplayTimeout: 9000,
+				autoplaySpeed: 1000,
+				rtl: c_rtl_c,
 				responsive:{ 0:{ items:1 }, 480:{ items: c_item_m }, 768:{ items: c_item_t }, 1170:{ items: c_item } }
 			});
 		});
 	}
-
-// 	owl.owlCarousel({
-//     loop:true,
-//     margin:10,
-//     autoplay:true,
-//     autoplayTimeout:1000,
-//     autoplayHoverPause:true
-// });
 
 
 
