@@ -423,9 +423,6 @@ var animation = bodymovin.loadAnimation({
 })
 
 
-
-
-
 	// particlesJS
 	var $particles_js = $('#particles-js');
 	if ($particles_js.length > 0 ) {
