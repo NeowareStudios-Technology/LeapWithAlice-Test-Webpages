@@ -4,7 +4,7 @@ function formCheck(){
         var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
         if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
 		// If our form doesn't match the regex ie. containing a <tag>, submit it
-            alert("Form Submitting...");
+            $("#preloader").show();
           return true;
         } else {
 	    // else the name or message contains an html <tag> and we deny the request to submit it.
@@ -27,7 +27,9 @@ function formCheck(){
           var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
           if(name==''||email==''||message=='') {
             $(".error").show().html("Please fill in all of the fields!");
+	    $("#preloader").hide();
             return false;
+		  
           } else {
             // AJAX Code To Submit Form.
             $.ajax({
@@ -39,12 +41,17 @@ function formCheck(){
 	      //dataType: 'json',
               success: function(result){
 		 var frm = document.getElementById('contact-form')[0];
-                 //$(".loader").show(); // if successful, show a "loader"
-		 alert("sent!");
+                 //$("#preloader").show(); // if successful, show a "loader"
+		 //alert("sent!");
                  frm.reset(); // reset form to not allow multiple submissions
               }
-            });
+            });// show success message
+            setTimeout(function(){ 
+             $(".success").show();
+             $(".preloader").hide();
+           }, 2500);
           }
           return false;
           }
           });
+	  });
