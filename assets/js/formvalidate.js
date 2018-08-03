@@ -47,7 +47,8 @@ function formCheck(){
               }
             });// show success message
             setTimeout(function(){ 
-             $(".success").show();
+             alert("sent");
+		    //$(".success").show();
              $(".preloader").hide();
            }, 2500);
           }
