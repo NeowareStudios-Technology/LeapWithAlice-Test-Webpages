@@ -4,7 +4,8 @@ function formCheck(){
         var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
         if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
 		// If our form doesn't match the regex ie. containing a <tag>, submit it
-            $("#preloader").show();
+            //$("#preloader").show();
+		alert("submitting form... click ok to continue");
           return true;
         } else {
 	    // else the name or message contains an html <tag> and we deny the request to submit it.
@@ -42,15 +43,15 @@ function formCheck(){
               success: function(result){
 		 var frm = document.getElementById('contact-form')[0];
                  //$("#preloader").show(); // if successful, show a "loader"
-		 //alert("sent!");
+		 alert("sent!");
                  frm.reset(); // reset form to not allow multiple submissions
               }
             });// show success message
-            setTimeout(function(){ 
-             alert("sent");
-		    //$(".success").show();
-             $(".preloader").hide();
-           }, 2500);
+//             setTimeout(function(){ 
+//              alert("sent");
+// 		    //$(".success").show();
+//              $(".preloader").hide();
+//            }, 2500);
           }
           return false;
           }
