@@ -19,7 +19,6 @@ function formCheck(){
           if (formCheck() == false){
           return false;
           } else {
-            var frm = document.getElementsByName('contact-form')[0];
           var name = $("#name").val();
           var email = $("#email").val();
           var message = $("#message").val();
@@ -39,8 +38,9 @@ function formCheck(){
 	      crossDomain: true,
 	      //dataType: 'json',
               success: function(result){
-                  //$(".loader").show(); // if successful, show a "loader"
-		      alert("sent!");
+		 var frm = document.getElementById('contact-form')[0];
+                 //$(".loader").show(); // if successful, show a "loader"
+		 alert("sent!");
                  frm.reset(); // reset form to not allow multiple submissions
               }
             });
