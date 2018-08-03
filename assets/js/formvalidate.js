@@ -45,7 +45,7 @@ function formCheck(){
 		 var frm = document.getElementById('contact-form')[0];
                  //$("#preloader").show(); // if successful, show a "loader"
 		 alert("sent!");
-                 frm.reset(); // reset form to not allow multiple submissions
+                 //frm.reset(); // reset form to not allow multiple submissions
               }
             });
           }
