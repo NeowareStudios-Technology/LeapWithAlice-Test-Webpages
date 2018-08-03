@@ -37,7 +37,7 @@ function formCheck(){
               data: dataString,
               cache: false,
 	      crossDomain: true,
-	      dataType: 'jsonp',
+	      //dataType: 'json',
               success: function(result){
                   //$(".loader").show(); // if successful, show a "loader"
 		      alert("sent!");
