@@ -27,8 +27,9 @@ function formCheck(){
           // Returns successful data submission message when the entered information is stored in database.
           var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
           if(name==''||email==''||message=='') {
-            $(".error").show().html("Please fill in all of the fields!");
-	    $("#preloader").hide();
+            //$(".error").show().html("Please fill in all of the fields!");
+		  alert("please fill all fields");
+	    //$("#preloader").hide();
             return false;
 		  
           } else {
@@ -46,14 +47,8 @@ function formCheck(){
 		 alert("sent!");
                  frm.reset(); // reset form to not allow multiple submissions
               }
-            });// show success message
-//             setTimeout(function(){ 
-//              alert("sent");
-// 		    //$(".success").show();
-//              $(".preloader").hide();
-//            }, 2500);
+            });
           }
           return false;
           }
           });
-	  });
