@@ -8,7 +8,7 @@
   js.id = id;
   var e = document.getElementsByTagName('script')[0];
   e.parentNode.insertBefore(js, e);
-})('hs-analytics', 'http://js.hs-analytics.net/analytics/1533086100000/4555673.js');
+})('hs-analytics', 'https://js.hs-analytics.net/analytics/1533086100000/4555673.js');
 
 (function (id, src, attrs) {
   if (document.getElementById(id)) {
