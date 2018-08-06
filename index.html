@@ -704,33 +704,49 @@
               <h6>Q2 2018:</h6>
               <p>Official partnership with the University of Central Florida announced</p>
             </div>
-            <div class="roadmap-item">
+            <div class="roadmap-item roadmap-done">
               <h6>Q2 2018:</h6>
               <p>Research Study with UCF: AR in the Classroom</p>
             </div>
-            <div class="roadmap-item">
+            <div class="roadmap-item roadmap-done">
               <h6>Q2 2018:</h6>
-              <p>Private Pre-Sale launch</p>
+              <p>AliceSpeaks&trade; Prototype App released on iOS and Android</p>
             </div>
-            <div class="roadmap-item">
+            <div class="roadmap-item roadmap-done">
+              <h6>Q2 2018:</h6>
+              <p>AliceThinks&trade; Prototype App released on iOS and Android</p>
+            </div>
+            <div class="roadmap-item roadmap-done">
               <h6>Q3 2018:</h6>
-              <p>Second Research Study with UCF, AR in the Classroom</p>
+              <p>LWA Security Token Generated</p>
+            </div>
+            <div class="roadmap-item roadmap-done">
+              <h6>Q3 2018:</h6>
+              <p>Official Partnership with the University of Algarve</p>
             </div>
             <div class="roadmap-item">
               <h6>Q4 2018:</h6>
-              <p>Security Token Offering launches</p>
+              <p>NSF Research Study: AR and Unique Learning Abilities</p>
             </div>
             <div class="roadmap-item">
               <h6>Q4 2018:</h6>
-              <p>Leap With Alice Lesson Creation Platform Beta</p>
+              <p>AliceLabs&trade; Beta Released</p>
+            </div>
+            <div class="roadmap-item">
+              <h6>Q1 2019:</h6>
+              <p>AliceClassroom&trade; Beta Released</p>
             </div>
             <div class="roadmap-item">
               <h6>Q3 2019:</h6>
-              <p>Leap With Alice Exchange Beta</p>
+              <p>AliceExchange&trade; Beta Released</p>
+            </div>
+            <div class="roadmap-item">
+              <h6>Q3 2019:</h6>
+              <p>ALICE Utility Token Distribution</p>
             </div>
             <div class="roadmap-item">
               <h6>Q2 2020:</h6>
-              <p>Full platform release</p>
+              <p>Full AliceSuite&trade; release</p>
             </div>
           </div>
         </div>
@@ -2573,12 +2589,6 @@
           <!-- .col  -->
         </div>
         <!-- .row  -->
-        <div id="contactFeedback" class="container col-sm-10 ml-5">
-          <div class="success">
-        <div id="success" class="alert alert-info alert-dismissible fade show" role="alert"><p id="successText"></p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert-->
-      </div><!--/.success-->
-      <br>
-      	<div id="error" class="alert alert-danger alert-dismissible fade show error" role="alert"><p>Your message couldn't be sent - please try again later.</p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert--></div>
         <div class="row">
           <div class="col-lg-4 offset-lg-1">
             <div class="gaps"></div>
@@ -2591,30 +2601,44 @@
           </div>
           <!-- .col  -->
           <div class="col-lg-5">
+            <div class="success col-sm-12">
+              <div id="success" class="alert alert-info alert-dismissible fade show" role="alert">
+                <p id="successText"></p>
+                <button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true" class="alert-close">&times;</span>
+                </button>
+              </div><!--/alert-->
+            </div><!--/.success-->
+        <br>
+        	<div id="error" class="alert alert-danger alert-dismissible fade show error col-sm-12" role="alert">
+            <p>Your message couldn't be sent - please try again later.</p>
+            <button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true" class="alert-close">&times;</span>
+            </button>
+          </div><!--/.error-->
 
 
+          <form method="POST" name="contact-form" id="contact-form" class="form-message text-left contact-form text-white">
+           <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
+             <label class="input-title"><font color="white">Your Name</font></label>
+             <input id="name" name="name" type="text" class="form-control input-line required">
 
-            <form method="POST" name="contact-form" id="contact-form" class="form-message text-left contact-form text-white">
-              <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
-                <label class="input-title"><font color="white">Your Name</font></label>
-                <input id="name" name="name" type="text" class="form-control input-line required">
+           </div>
+           <div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
+             <label class="input-title"><font color="white">Your Email</font></label>
+             <input id="email" name="_replyto" type="email" class="form-control input-line required email">
 
-              </div>
-              <div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-                <label class="input-title"><font color="white">Your Email</font></label>
-                <input id="email" name="_replyto" type="email" class="form-control input-line required email">
+           </div>
+           <div class="input-field animated" data-animate="fadeInUp" data-delay=".5">
+             <label class="input-title"><font color="white">Your Message</font></label>
+             <textarea id="message" name="message" class="form-control txtarea input-line required"></textarea>
 
-              </div>
-              <div class="input-field animated" data-animate="fadeInUp" data-delay=".5">
-                <label class="input-title"><font color="white">Your Message</font></label>
-                <textarea id="message" name="message" class="form-control txtarea input-line required"></textarea>
-
-              </div>
-              <input type="text" class="d-none" name="form-anti-honeypot" value="">
-              <div class="input-field animated" data-animate="fadeInUp" data-delay=".6">
-                <button type="submit" value="Send" id="btn_submit" class="btn my-2 mx-2">Submit</button>
-              </div>
-            </form>
+           </div>
+           <input type="text" class="d-none" name="form-anti-honeypot" value="">
+           <div class="input-field animated" data-animate="fadeInUp" data-delay=".6">
+             <button type="submit" value="Send" id="btn_submit" class="btn my-2 mx-2">Submit</button>
+           </div>
+         </form>
             <br>
           </div>
 

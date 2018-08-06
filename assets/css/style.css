@@ -488,7 +488,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
     margin-bottom: 30px; }
 
   #mc-embedded-subscribe{
-    margin: 16vh 0 0 -61vw!important;
+    margin: 18vh 0 0 -60.2vw!important;
   }
 
   #receive-alicenews{
@@ -6803,10 +6803,12 @@ header-image-video {
  padding: 70px;
  }
 
+/* v1.2.0 R */
 #mce-EMAIL{
-  padding: 1.5vh !important;
-  margin: 0.7vh 0 0 -18vw;
+  padding: 1vh !important;
+  margin: 0.7vh 0 0 -15vw;
   font-size: 1.1em !important;
+
 }
 
  #mc-embedded-subscribe{
@@ -6832,10 +6834,6 @@ header-image-video {
 
  #signup-sub{
    letter-spacing: 1px;
- }
-
- #contactFeedback{
-   margin-left: 10vw!important;
  }
 
 .alert-danger{

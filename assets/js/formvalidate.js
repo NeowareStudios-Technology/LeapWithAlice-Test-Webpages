@@ -22,7 +22,7 @@ function formCheck(){
     return false;
     } else {
       //$(".loader").show();
-    var frm = document.getElementsByName('contact-form')[0];
+    //var frm = document.getElementsByName('contact-form')[0];
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
