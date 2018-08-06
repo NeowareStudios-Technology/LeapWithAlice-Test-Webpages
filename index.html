@@ -2563,7 +2563,6 @@
     <!-- Start Section -->
     <div class="section section-pad section-bg-contact " id="contactus">
       <div class="container">
-        <div class="success">
 
         <div class="row text-center">
           <div class="col-lg-6 offset-lg-3">
@@ -2576,10 +2575,11 @@
         </div>
         <!-- .row  -->
         <div id="contactFeedback" class="container col-sm-10 ml-5">
-        <div id='success' style="display:none" class="alert alert-info alert-dismissible fade show ml-5 col-sm-8" role="alert"><p id="successText"></p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/.success-->
+          <div class="success">
+        <div id="success" class="alert alert-info alert-dismissible fade show" role="alert"><p id="successText"></p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert-->
+      </div><!--/.success-->
       <br>
-      	<div id='error' style="display:none" class="alert alert-danger alert-dismissible fade show error ml-5 col-sm-8" role="alert"><p> Your message couldn't be sent - please try again later</p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert-->
-      </div>
+      	<div id="error" class="alert alert-danger alert-dismissible fade show error" role="alert"><p> Your message couldn't be sent - please try again later.</p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert--></div>
         <div class="row">
           <div class="col-lg-4 offset-lg-1">
             <div class="gaps"></div>
@@ -2595,22 +2595,25 @@
 
 
 
-            <form id="contact-form" class="form-message text-left contact-form">
+            <form method="POST" name="contact-form" id="contact-form" class="form-message text-left contact-form text-white">
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
-                <input id="name" name="name" type="text" class="form-control input-line required">
                 <label class="input-title"><font color="white">Your Name</font></label>
+                <input id="name" name="name" type="text" class="form-control input-line required">
+
               </div>
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-                <input id="email" name="_replyto" type="email" class="form-control input-line required email">
                 <label class="input-title"><font color="white">Your Email</font></label>
+                <input id="email" name="_replyto" type="email" class="form-control input-line required email">
+
               </div>
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".5">
-                <textarea id="message" name="message" class="form-control txtarea input-line required"></textarea>
                 <label class="input-title"><font color="white">Your Message</font></label>
+                <textarea id="message" name="message" class="form-control txtarea input-line required"></textarea>
+
               </div>
               <input type="text" class="d-none" name="form-anti-honeypot" value="">
               <div class="input-field animated" data-animate="fadeInUp" data-delay=".6">
-                <button type="submit" value="Send" id="btn_submit" class="btn">Submit</button>
+                <button type="submit" value="Send" id="btn_submit" class="btn my-2 mx-2">Submit</button>
               </div>
             </form>
             <br>
@@ -2740,7 +2743,85 @@
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 
+<script>
 
+      function formCheck(){
+        var checkName = $("#name").val();
+        var checkMessage = $("#message").val();
+        var patt = /(<script(\s|\S)*?<\/script>)|(<style(\s|\S)*?<\/style>)|(<!--(\s|\S)*?-->)|(<\/?(\s|\S)*?>)/g;
+
+        if( patt.test(checkName) == false && patt.test(checkMessage) == false ){
+           // alert("Form Submitting...");
+          //$(".loader").show(); // if successful, show a "loader"
+          $("#btn_submit").html("Sending...");
+          return true;
+        } else {
+            $(".error").show().html("Please correct your form and try again.");
+            return false;
+        }
+      }
+
+
+        $("#btn_submit").click(function(e){
+          e.preventDefault(); // don't allow to submit on default
+          if (formCheck() == false){
+           // alert("correct your form and try again");
+          return false;
+          } else {
+            //$(".loader").show();
+          var frm = document.getElementsByName('contact-form')[0];
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          var error = "";
+          // Returns successful data submission message when the entered information is stored in database.
+          var dataString = 'name='+ name + '&email='+ email + '&message='+ message;
+          if(name==''||email==''||message=='') {
+            $(".error").show().html("Please fill in all of the fields!");
+            $(".success").hide();
+            $("#btn_submit").html("Submit");
+            //$(".loader").hide();
+            return false;
+          } else {
+            // AJAX Code To Submit Form.
+            $.ajax({
+              type: "POST",
+              url: "https://www.starlimeweb.com/leapwithalice.io/",
+              data: dataString,
+              cache: false,
+              crossDomain:true,
+              success: function(result){
+              //$("#successText").html(result);
+                setTimeout(function(){
+                  if (result == "-2"){
+                    $("#btn_submit").html("Submit");
+                    $(".error").show().html("The Email Address is not valid");
+                    $(".success").hide();
+                    //$(".loader").hide();
+                  }
+                  if (result == "-1") {
+                    $("#btn_submit").html("Submit");
+                    $(".error").show().html("Unable to send, please try again later");
+                    $(".success").hide();
+                    //$(".loader").hide();
+                  }
+                  if (result == "1"){
+                    //$(".loader").hide();
+                    $("#btn_submit").html("Sent!");
+                    $(".error").hide();
+                    $(".success").show();
+                    $("#successText").html("Message Sent!");
+                  //  frm.reset(); // reset form to not allow multiple submissions
+                  }
+                }, 500);
+          	}
+            });
+          }
+          return false;
+          }
+          });
+
+</script>
 
     <!-- Start of leapwithalice google translate script -->
 <script type="text/javascript">
