@@ -6854,11 +6854,11 @@ header-image-video {
   color: white !important;
 }
 
-#success{
+.success{
   display:none;
 }
 
-#error{
+.error{
   display:none;
 }
 

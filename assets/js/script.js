@@ -80,13 +80,14 @@
 			if ($win.width() < 991){
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
-				if ( $('a').hasClass("dropdown-item") ){
+				if( $(this).hasClass('whitepaper') ){
 					return true;
 				}
 			}
-			//return false;
+			return false;
 		});
 	}
+
 
 
 

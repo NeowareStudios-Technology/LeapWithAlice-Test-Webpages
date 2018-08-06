@@ -5,9 +5,6 @@
 .third{
   display:none;
 }
-.blog-item{
-  border-radius: 0!important;
-}
 
 img{
   border-radius: 0!important;
@@ -52,9 +49,16 @@ img{
   text-align: left !important;
 }
 
-div{
-  border-radius:0!important;
+.related-link{
+  margin: 1.1vh 0 0 1vh !important;
+  font-size: 1em;
 }
-div:hover{
-  border-radius:0!important;
+
+.related-articles{
+  margin-top: 3vh !important;
+  font-size: 1em !important;
+}
+
+#nextPosts{
+  margin-right: -30px!important;
 }
