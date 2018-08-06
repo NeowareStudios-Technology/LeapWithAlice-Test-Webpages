@@ -69,6 +69,7 @@
 				$(this).addClass('open');
 			}
 		});
+
 		$dropdown_menu.on("mouseleave",function(){
 			if ($win.width() > 991) {
 				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().hide();
@@ -76,12 +77,14 @@
 			}
 		});
 
-		$dropdown_menu.click(function(){
+		$dropdown_menu.click(function(e){
 			if ($win.width() < 991){
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
 			}
-			//return false;
+			//e.preventDefault();
+			e.stopPropagation();
+			return true;
 		});
 	}
 
