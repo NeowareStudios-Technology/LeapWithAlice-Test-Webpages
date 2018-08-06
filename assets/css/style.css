@@ -6827,9 +6827,11 @@ header-image-video {
  }
 
  #wpBtn{
-   padding-right:0 !important;
-   margin-right:0 !important;
-   padding-left: 2vw !important;
+   padding: 0 0.5vw !important;
+ }
+
+ #wpBtn:hover{
+   color: blue;
  }
 
  #signup-sub{
@@ -6859,5 +6861,3 @@ header-image-video {
 .error{
   display:none;
 }
-
-/** END */
