@@ -80,9 +80,6 @@
 			if ($win.width() < 991){
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
-				if( $(this).hasClass('whitepaper') ){
-					return true;
-				}
 			}
 			return false;
 		});
