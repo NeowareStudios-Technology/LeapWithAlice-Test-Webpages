@@ -122,8 +122,8 @@
             <!-- <li class="nav-item dropdown navbar-btns animated remove-animation">
               <a class="nav-link dropdown-toggle btn btn-white btn-sm col-lg-12 col-sm-2 menu-link" href="#" data-toggle="dropdown">Whitepaper&nbsp;&nbsp;<em class="ti ti-angle-down"></em></a>-->
             <!--  <div class="dropdown-menu"> -->
-                <li class="nav-item dropdown my-auto ml-1 mr-5" >
-                  <a id="wpBtn" class="btn btn-white btn-sm text-left pl-2 pr-3 mr-2" href="#" data-toggle="dropdown" >Whitepaper&nbsp;&nbsp; <em class="ti ti-angle-down"></em> </a>
+                <li class="nav-item dropdown my-auto ml-1 mr-2 pr-0" >
+                  <a id="wpBtn" class="btn btn-white text-left pl-4 pr-0 mr-0" href="#" data-toggle="dropdown" >Whitepaper <em class="ti ti-angle-down pr-0 mr-0"></em></a>
                   <div class="dropdown-menu">
                     <a class="dropdown-item wp-link" target="_blank" href="./LWAWhitepaper.pdf"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"> -->English</a>
                     <a class="dropdown-item wp-link" target="_blank" href="./Translated-Whitepapers/LWAWhitepaper-Spanish.pdf"><!-- <img class="lang-flag" src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"> -->Spanish</a>
@@ -268,16 +268,17 @@
 <div class="section section-bg-AliceSuite my-0 py-0">
   <div class="container">
     <div class=" text-center">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-12 col-lg-10 col-sm-12 offset-md-2">
         <div class="section-head">
-          <div class="wrapper">
-            </br></br></br></br>
-            <h1 id="receive-alicenews my-0 py-0">Leap With Alice Newsletter</h1> </br>
-            <div class="box col-sm-12 my-0 py-0">
+          <div class="wrapper col-sm-12">
+            <br><br>
+            <h1 id="receive-alicenews" class="ml-0 my-0 py-0 text-left">Newsletter</h1>
+            <strong><p id="signup-sub" class="mt-0 pt-0 lead text-left font-weight-bold ml-0">Sign up to know what's happening</p></strong>
+            <div class="box my-0 py-0 ml-5 col-sm-12">
               <form action="https://leapwithalice.us18.list-manage.com/subscribe/post?u=d704b7c7bb8431cbc7bd865a6&amp;id=c857fd4ee0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate my-0 py-0" target="_blank" novalidate>
-                <input type="email" value="" name="EMAIL" class="required email col-sm-12 px-0 mx-0 text-center" style="width:60vw;" id="mce-EMAIL" placeholder="subscribe@leapwithalice.io" required>
+                <input type="email" value="" name="EMAIL" class="required email col-lg-8 col-sm-12 px-2 py-0 text-left" style="width:60vw;" id="mce-EMAIL" placeholder="subscribe@leapwithalice.io" required>
                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d704b7c7bb8431cbc7bd865a6_c857fd4ee0" tabindex="-1" value=""></div>
-                <input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-demo mt-3">
+                <input type="submit" value="sign up" name="subscribe" id="mc-embedded-subscribe" class="btn btn-demo">
                 <div id="subscribe-result">
                 </div>
               </form>
@@ -2560,9 +2561,10 @@
 
 
     <!-- Start Section -->
-    <!-- Start Section -->
     <div class="section section-pad section-bg-contact " id="contactus">
       <div class="container">
+        <div class="success">
+
         <div class="row text-center">
           <div class="col-lg-6 offset-lg-3">
             <div class="section-head-s2">
@@ -2573,6 +2575,11 @@
           <!-- .col  -->
         </div>
         <!-- .row  -->
+        <div id="contactFeedback" class="container col-sm-10 ml-5">
+        <div class="alert alert-info alert-dismissible fade show ml-5 col-sm-8" role="alert"><p id="successText"></p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/.success-->
+      <br>
+      	<div class="alert alert-danger alert-dismissible fade show error ml-5 col-sm-8" role="alert"><p> Your message couldn't be sent - please try again later.</p><button type="button" class="close alert-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="alert-close">&times;</span></button></div><!--/alert-->
+      </div>
         <div class="row">
           <div class="col-lg-4 offset-lg-1">
             <div class="gaps"></div>

@@ -6,11 +6,15 @@
   display:none;
 }
 .blog-item{
-  border-radius: 100%!important;
+  border-radius: 0!important;
+}
+
+img{
+  border-radius: 0!important;
 }
 
 .press-div{
-    border-radius: 100%;
+    border-radius: 0!important;
 }
 
 .readmore-link{
@@ -27,13 +31,30 @@
 }
 
 .blog-texts{
-  border-radius: 20px;
+  border-radius: 0px;
   margin-top:-3vh;
   text-align: left;
+  margin-bottom: -2vh;
 }
 
 .blog-title{
-  text-align:left;
-  padding-left:0px;
+  text-align: left;
+  margin-bottom: 2.5vh !important;
+  padding-left:0;
+  padding-right: 0 !important;
   padding-bottom: 2px!important;
+}
+
+.blog-meta{
+  margin-top: 1.5vh !important;
+  margin-bottom: -3.5vh !important;
+  font-size: 1.23em !important;
+  text-align: left !important;
+}
+
+div{
+  border-radius:0!important;
+}
+div:hover{
+  border-radius:0!important;
 }

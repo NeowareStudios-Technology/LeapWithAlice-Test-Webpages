@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #1641b5; }
 
 h1, .h1 {
-  font-size: 2.93em; }
+  font-size: 2.95em; }
 
 h2, .h2 {
   font-size: 2.3em; }
@@ -473,6 +473,7 @@ h1, h2, h3, h4, h5, h6, blockquote {
   h2, .h2 {
     font-size: 2em; } }
 @media only screen and (max-width: 991px) {
+
   body {
     font-size: 14px;
     -webkit-text-size-adjust: 100%; }
@@ -484,7 +485,30 @@ h1, h2, h3, h4, h5, h6, blockquote {
     font-size: 2em; }
 
   .res-m-btm {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+
+  #mc-embedded-subscribe{
+    margin: 16vh 0 0 -61vw!important;
+  }
+
+  #receive-alicenews{
+    text-align: left;
+    margin-bottom: 0vh;
+  }
+
+  #signup-sub{
+    margin-bottom: -5vh;
+  }
+
+  #mce-EMAIL{
+    margin: -85vh 0 0 -73vw !important;
+  }
+
+  .team-info{
+    text-align: center !important;
+  }
+
+  }
 @media only screen and (max-width: 767px) {
   .container {
     padding-left: 20px;
@@ -6778,4 +6802,56 @@ select:focus {
 header-image-video {
  padding: 70px;
  }
+
+#mce-EMAIL{
+  padding: 1.5vh !important;
+  margin: 0.7vh 0 0 -18vw;
+  font-size: 1.1em !important;
+}
+
+ #mc-embedded-subscribe{
+   background: #49f;
+   outline: none;
+   border: none;
+   font-size: 1.2em;
+   border-radius: 0;
+   padding-top: 0.3vh;
+   padding-bottom: 0.3vh;
+   margin: -0.08vh 0 0 2vh;
+ }
+ #mc-embedded-subscribe:hover{
+   color: blue;
+   background: white;
+ }
+
+ #wpBtn{
+   padding-right:0 !important;
+   margin-right:0 !important;
+   padding-left: 2vw !important;
+ }
+
+ #signup-sub{
+   letter-spacing: 1px;
+ }
+
+ #contactFeedback{
+   margin-left: 10vw!important;
+ }
+
+.alert-danger{
+  background: blue !important;
+  color: white !important;
+  border: 0.5px solid red;
+}
+
+.alert-info{
+    background: blue!important;
+    color: white;
+    border: 0.5px solid green;
+}
+
+.alert-close:hover{
+  color: white !important;
+}
+
 /** END */
