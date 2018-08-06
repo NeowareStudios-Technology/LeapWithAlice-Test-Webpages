@@ -36,6 +36,7 @@ img{
 
 .blog-title{
   text-align: left;
+  margin-top: -0.5vh;
   margin-bottom: 2.5vh !important;
   padding-left:0;
   padding-right: 0 !important;
@@ -43,8 +44,8 @@ img{
 }
 
 .blog-meta{
-  margin-top: 1.5vh !important;
-  margin-bottom: -3.5vh !important;
+  margin-top: 5vh !important;
+  margin-bottom: 0.05vh !important;
   font-size: 1.23em !important;
   text-align: left !important;
 }
