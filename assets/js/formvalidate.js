@@ -50,16 +50,16 @@ function formCheck(){
                     $("#btn_submit").html("Submit");
                     $(".error").show().html("The Email Address is not valid");
                     $(".success").hide();
-                    $(".loader").hide();
+                    //$(".loader").hide();
                   }
                   if (result == "-1") {
                     $("#btn_submit").html("Submit");
                     $(".error").show().html("Unable to send, please try again later");
                     $(".success").hide();
-                    $(".loader").hide();
+                    //$(".loader").hide();
                   }
                   if (result == "1"){
-                    $(".loader").hide();
+                    //$(".loader").hide();
                     $("#btn_submit").html("Sent!");
                     $(".error").hide();
                     $(".success").show();
