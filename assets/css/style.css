@@ -6854,4 +6854,12 @@ header-image-video {
   color: white !important;
 }
 
+.success{
+  display:none;
+}
+
+.error{
+  display:none;
+}
+
 /** END */
