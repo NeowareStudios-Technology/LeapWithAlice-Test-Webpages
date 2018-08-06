@@ -6855,7 +6855,7 @@ header-image-video {
 }
 
 #success{
-  display:none;
+  display:none !important;
 }
 
 #error{

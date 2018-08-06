@@ -64,7 +64,7 @@ function formCheck(){
                     $(".error").hide();
                     $(".success").show();
                     $("#successText").html("Message Sent!");
-                    frm.reset(); // reset form to not allow multiple submissions
+                    //frm.reset(); // reset form to not allow multiple submissions
                   }
                 }, 500);
           	}
