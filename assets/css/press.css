@@ -50,15 +50,19 @@ img{
 }
 
 .related-link{
-  margin: 1.1vh 0 0 1vh !important;
-  font-size: 1em;
+  margin: 4vh 0 0 1vh !important;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
-.related-articles{
+#related-articles{
   margin-top: 3vh !important;
-  font-size: 1em !important;
 }
 
 #nextPosts{
   margin-right: -30px!important;
+}
+
+.related-link-text{
+  margin-top: 2vh;
 }

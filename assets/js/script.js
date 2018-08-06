@@ -76,14 +76,15 @@
 			}
 		});
 
-		$dropdown_menu.on("click",function(){
+		$dropdown_menu.click(function(){
 			if ($win.width() < 991){
 				$(this).children('.dropdown-menu').toggle();
 				$(this).toggleClass('open');
 			}
-			return false;
+		//	return false;
 		});
 	}
+
 
 
 
