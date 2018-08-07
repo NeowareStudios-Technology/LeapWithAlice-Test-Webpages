@@ -67,3 +67,14 @@
 .full-press-photo > img{
   border-radius: 0!important;
 }
+
+#dateID{
+  color: #000 !important;
+}
+
+#dateID:hover{
+  color:#1af !important;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+}

@@ -351,4 +351,8 @@ a:hover, a:focus, a:active { color: #343459; }
   border: 1px solid blue;
 }
 
+.blog-texts{
+  margin-top: -5vh !important;
+  border-radius: 30px !important;
+}
 /*! END */
