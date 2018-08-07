@@ -324,6 +324,8 @@
 		// 	});
 		// 	selectRec.on('change', function() { $(this).valid(); });
 		// }
+
+		
 		// SubscribeForm
 		if (subscribeForm.length > 0) {
 			var sf_results = subscribeForm.find('.subscribe-results');

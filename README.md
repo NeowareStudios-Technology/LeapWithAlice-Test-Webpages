@@ -23,8 +23,7 @@ The file layout for each article are as follows:
 	leapwithalice.io/press-releases/article/
 
 ### Visual Layout:
-```mermaid
-graph LR
+```
 A[LeapWithAlice] --> B(Press Releases)
 B --> C(Press Article)
 C --> D((Index))
@@ -59,8 +58,7 @@ The related article sections contains other press releases available on our site
 
 ## 2. Edits to Main Site
 
-- Fixed links in header/footer/nav
-
+- Fixed links in header/footer/navigation
 - Added link to Press Release from main site
 - Made content enabling future contact section functionality
 - Fixed mobile layout issues
@@ -81,25 +79,22 @@ The related article sections contains other press releases available on our site
  - Added Alex to Team Members section
 
 ## 5. Changed FAQ
-Updated FAQ file tructure to a more pleasing structure / layout described first with diagrams.
+Updated FAQ file structure to a more pleasing structure / layout described first with diagrams.
 
-##### (Squares Represent Folders, Circles represent Files)
 
 ### Old Leap With Alice FAQ Layout:
 	leapwithalice.io/faq.html
-```mermaid
-graph LR
+```
+
 A[LeapWithAlice] --> B((faq.html))
 
 ```
 
 ### New Leap With Alice FAQ Layout:
 	leapwithalice.io/FAQ/
-```mermaid
-graph LR
+```
 A[LeapWithAlice] --> B(FAQ)
 B --> C((index))
-
 ```
 
 
@@ -107,20 +102,19 @@ B --> C((index))
 
 Similar to FAQ, Blog is described below and how it was changed. You may have noticed some stylized changes as well, but that is less important than file structure.
 
-### Squares Represent Folders, Circles represent Files:
 
 ### Old Leap With Alice Blog Layout:
 	leapwithalice.io/blog.html
-```mermaid
-graph LR
+```
+
 A[LeapWithAlice] --> B((blog.html))
 
 ```
 
 ### New Leap With Alice Blog Layout:
 	leapwithalice.io/blog/
-```mermaid
-graph LR
+```
+
 A[LeapWithAlice] --> B(blog)
 B --> C((index))
 
