@@ -441,7 +441,7 @@
 
 								output += '<div id="blogPhotoID" class="blog-photo" ><a href="'+ item.link + '"><img class="img-responsive"  src="' + src + '" </a></div>';
 
-
+									output += '<p id="dateID" class="date ml-5 mt-2 mb-0 lead">' + $.format.date(item.pubDate, "dd MMMM") + "</p>";
 								output += '<div id="blogTitleID" class="blog-title"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
 								// output += '<div id="blogMetaID" class="post-meta"><span>By ' + item.author + '</span></div>';
 
@@ -458,9 +458,9 @@
 								// output += '<p id="description">'  + trimmedString +'... </p>';
 
 
-								output += '<p id="dateID" class="date">' + $.format.date(item.pubDate, "dd MMM") + "</p>";
 
-								output += '</div></div></div><br><br>';
+
+								output += '</div><a href="'+ item.link + '" class="readmore-link btn btn-secondary my-3 mx-5">Read More</a></div></div><br><br>';
 
 								i = k;
 								return k < 3;
@@ -528,9 +528,9 @@
 								// output += '<p id="description">'  + trimmedString +'... </p>';
 
 
-								output += '<p id="dateID" class="date">' + $.format.date(item.pubDate, "dd MMM") + "</p>";
+								output += '<p id="dateID" class="date blog-meta">' + $.format.date(item.pubDate, "dd MMM") + "</p>";
 
-								output += '</div></div></div><br><br>';
+								output += '</div></div></div></div><br><br>';
 
 								if (k == 9){
 									var elem = document.getElementById('morePosts');

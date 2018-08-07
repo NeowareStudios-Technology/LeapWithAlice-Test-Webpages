@@ -6,10 +6,6 @@
   display:none;
 }
 
-img{
-  border-radius: 0!important;
-}
-
 .press-div{
     border-radius: 0!important;
 }
@@ -66,4 +62,8 @@ img{
 
 .related-link-text{
   margin-top: 2vh;
+}
+
+.full-press-photo > img{
+  border-radius: 0!important;
 }
