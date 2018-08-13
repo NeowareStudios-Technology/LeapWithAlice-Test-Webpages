@@ -33,7 +33,9 @@
 
 
 
-
+<!--Begin Sketchfab AR Script-->
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.0.js"></script>
+<!--End Sketchfab AR Script-->
 
 <!-- End of leapwithalice google translate script -->
 
@@ -244,13 +246,44 @@
         <div class="col-lg-6 res-m-bttm animated" data-animate="fadeInUp" data-delay=".1">
           <div >
             <img src="images/WhatIsLWA.png" alt="cover">
-            </a>
+
           </div>
         </div><!-- .col  -->
         <div class="col-lg-5 offset-lg-1">
           <div class="text-block">
             <h2 class="animated" data-animate="fadeInUp" data-delay=".2">A Leap In Creative Education</h2>
-            <p class="lead animated" data-animate="fadeInUp" data-delay=".3">Leap With Alice empowers educators on a global scale, utilizing emerging technologies to reimagine the outdated education system. Providing a variety of EdTech tools, Leap With Alice enhances education with augmented reality, secures users with blockchain technology, and incentivizes activity through cryptocurrency. Leap With Alice creates a world where students learn through innovation and educators earn through imagination.
+            <p class="lead animated" data-animate="fadeInUp" data-delay=".3">Leap With Alice empowers educators on a
+              global scale, utilizing emerging technologies to reimagine the outdated education system. Providing a
+              variety of EdTech tools, Leap With Alice enhances education with augmented reality, secures users with
+              blockchain technology, and incentivizes activity through cryptocurrency. Leap With Alice creates a world
+              where students learn through innovation and educators earn through imagination.
+            </p>
+          </div>
+        </div><!-- .col  -->
+      </div><!-- .row  -->
+    </div><!-- .container  -->
+    <br><br>
+  </div>
+
+<!--BEGIN AR SECTION-->
+
+<div class="section pt-3 status-section coming-section text-white" style="" id="intro">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 res-m-bttm animated" data-animate="fadeInUp" data-delay=".1">
+          <div >
+            <iframe src="" class="container" style="height:30rem; outline:none !important; border:none !important;" id="sketch-view" allow="autoplay; fullscreen; vr" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+        </div><!-- .col  -->
+        <div class="col-lg-5 offset-lg-1">
+          <div class="text-block">
+            <h2 class="animated" data-animate="fadeInUp" data-delay=".2">A Leap In Creative Education</h2>
+            <p class="lead animated" data-animate="fadeInUp" data-delay=".3">Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
             </p>
           </div>
         </div><!-- .col  -->
@@ -260,7 +293,7 @@
   </div>
 
 
-
+<!--/AR SECTION-->
 
 
 
@@ -541,15 +574,17 @@
           <div class="col-md-6 order-md-first order-last">
             <div class="text-block">
               <h6 class="heading-xs animated" data-animate="fadeInUp" data-delay=".0"></h6>
-              <h2 class="animated" data-animate="fadeInUp" data-delay=".1">Leap With Alice & UCF</h2>
+              <h2 class="animated" data-animate="fadeInUp" data-delay=".1">Leap With Alice &amp; UCF</h2>
 
-              <p class="animated" data-animate="fadeInUp" data-delay=".4"><font color="white">
-                Leap With Alice is proud to announce our partnership with the University of Central Florida. Working together to create a deeper connection within the education community, Leap With Alice offices are located within the Toni Jennings Exceptional Education
-                Institute. This partnership will allow Leap With Alice to conduct impactful studies, collecting data to strategically implement our technology and better the future of education. </p></font>
+              <p class="animated text-white" data-animate="fadeInUp" data-delay=".4">
+                Leap With Alice is proud to announce our partnership with the University of Central Florida. Working together to create a
+                deeper connection within the education community, Leap With Alice offices are located within the Toni Jennings
+                Exceptional Education Institute. This partnership will allow Leap With Alice to conduct impactful
+                studies, collecting data to strategically implement our technology and better the future of education. </p>
 
-              <p class="animated" data-animate="fadeInUp" data-delay=".5"><font color="white">
+              <p class="animated text-white" data-animate="fadeInUp" data-delay=".5">
                 “Innovative technology, such as Leap With Alice and the use of Augmented Reality, really have a tremendous promise in order to impact the way in which students will conduct education as well as there future employability for all programs, including STEM.”
-                <br><br> -Dr. Trey Vasquez of UCF Toni Jennings Exceptional Education Institute</p></font>
+                <br><br> -Dr. Trey Vasquez of UCF Toni Jennings Exceptional Education Institute</p>
 
               <br>
 
@@ -2709,6 +2744,30 @@
   </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<!--Begin Sketchfab API AR Script-->
+<script>
+
+var iframe = document.getElementById( 'sketch-view' );
+    var urlid = 'be0c8caecc354a77b98d577095ecbad2';
+    var client = new Sketchfab( iframe );
+    client.init( urlid, {
+        success: function onSuccess( api ){
+            api.start();
+					//api.transparent(1);
+            api.addEventListener( 'viewerready', function() {
+
+                // API is ready to use
+                // Insert your code here
+                console.log( 'Viewer is ready' );
+
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        }
+    } );
+</script>
+<!--End Sketchfab API AR Script-->
 
 <!--Begin Form Submit Script-->
 <!--<script src="assets/js/formvalidate.js"></script>-->
