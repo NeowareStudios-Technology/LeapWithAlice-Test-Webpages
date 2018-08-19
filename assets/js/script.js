@@ -72,7 +72,7 @@
 
 		$dropdown_menu.on("mouseleave",function(){
 			if ($win.width() > 991) {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadOut("fast");
+				$('.dropdown-menu', this).not('.in .dropdown-menu').stop().fadeOut("fast");
 				$(this).removeClass('open');
 			}
 		});
