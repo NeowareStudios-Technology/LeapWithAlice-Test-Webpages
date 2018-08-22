@@ -4,14 +4,23 @@
  
  ### Good React Resources:
  [Facebook's React-Native Docs](https://facebook.github.io/react-native/docs/getting-started)
+ 
 [React-Native DOM for Web](http://reactnative.com/react-native-dom/)
+
 [RN Tester](https://rntester.now.sh/)
+
 [React-Native-Web Docs](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/getting-started.md)
+
 [RNWeb Component, APIs, and Example Apps](https://necolas.github.io/react-native-web/storybook/?selectedKind=Components&selectedStory=ActivityIndicator&full=0&addons=0&stories=1&panelRight=0)
+
 [Zeplin](https://zeplin.io/)
- [UIZoo](https://myheritage.github.io/UiZoo.js/)
+
+[UIZoo](https://myheritage.github.io/UiZoo.js/)
+
 [Redux / Flux Q&A](https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux)
+
 [React SketchApp from AirBnB](https://github.com/airbnb/react-sketchapp)
+
 # Table of Contents:
 ### 1. Commenting &amp; Documentation *(read: styleguide)*
 
