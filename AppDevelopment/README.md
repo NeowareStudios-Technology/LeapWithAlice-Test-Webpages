@@ -43,7 +43,7 @@
 
 ### 4. Summary and Important React Specific Notes
 
-# 1. StyleGuide &amp; Naming Conventions:
+# 1. Commenting & Documentation / StyleGuide
 
 Commenting should describe each function and purpose, but not make the function more confusing. You are describing functionality, not giving your life story. 
 P.S. Don't be afraid of whitespace
