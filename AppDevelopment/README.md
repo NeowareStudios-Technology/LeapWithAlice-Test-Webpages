@@ -520,8 +520,11 @@ doSomething()
 
 ## Modularizing the React Workspace
 Sources:
+
 [How to Better Organize React Apps](https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1)
+
 [Why React Devs should Modularize](https://medium.com/@alexmngn/why-react-developers-should-modularize-their-applications-d26d381854c1)
+
 [JavaScript Module Pattern in depth](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
 
 First, I want to provide an ideal / modular file base architecture:
