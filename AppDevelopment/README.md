@@ -23,7 +23,7 @@
 
 [React-Native-Web Docs](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/getting-started.md)
 
-### Reacct-native-web web specific- UI patterns
+### React-Native-Web, web-specific UI patterns
 [Links](https://codesandbox.io/s/53r88k5opx)
 
 [Hover styles](https://codesandbox.io/s/o9q8vy70l5)
