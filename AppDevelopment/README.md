@@ -61,8 +61,9 @@ var x = y + z;
 var values = []; // initialize array first
 values.push("Volvo",  // then add values 
             "Saab",   
-	    "Fiat"
-	   );
+	    "Fiat"    // NOTE! No trailing Comma. Valid 
+	   );        // JSON does not use trailing commas
+	            // Trailing Commas will crash IE8
 console.log(values); // result: ["Volvo", "Saab", "Fiat"]
 ```
 
