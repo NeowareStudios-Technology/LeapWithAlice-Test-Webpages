@@ -613,3 +613,16 @@ for (let i in iterable){
  // 2
  // 3
 ```
+
+## React Specific:
+
+The main piece of advice you will always hear when practicing React is to NEVER set the state directly.
+There is a method in React that allows you to do that called ```setState()```
+
+### React / Redux short read on importance:
+
+#### What’s Redux?
+As its documentation states, redux is a predictable state container for JavaScript applications. It’s both regular library and a data-flow architecture. A lot of people think that it comes with React Native and it is just another tool of it. That’s a big misunderstanding! It’s a framework-agnostic tool that fits with React Native really well but it still can be used with almost any JavaScript library or framework like jQuery, Angular, Ember, Meteor or even vanilla JavaScript.
+
+#### Why should I use it?
+React does not consider direct component-to-component communication as a good practice even if it has the ability to support it. An architecture like this, is going to lead to a poorly structured source code sooner or later which will be difficult to maintain and scale. Redux offers a way to store all of the application state in just one place with global scope. Then your React Native components dispatch actions that trigger changes to the store. Components that need to “know” about those changes should be connected to Redux state.
