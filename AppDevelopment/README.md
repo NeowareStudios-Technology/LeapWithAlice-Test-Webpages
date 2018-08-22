@@ -65,9 +65,9 @@ x += i;
 ### Conditionals:
 ```js
 if  ( time <  20 ) {  
-greeting =  "Good day";  
+  greeting =  "Good day";  
 }  else  {  
-greeting =  "Good evening";  
+  greeting =  "Good evening";  
 }
 ```
 
@@ -85,10 +85,10 @@ General rules for object definitions:
 ### Example
 ```js
 var  person = {  
-firstName:  "John",  
-lastName:  "Doe",  
-age:  50,  
-eyeColor:  "blue"  
+  firstName:  "John",  
+  lastName:  "Doe",  
+  age:  50,  
+  eyeColor:  "blue"  
 };
 ```
 
