@@ -27,11 +27,16 @@
 ### 2. General JavaScript Intro + Best Practice
    - JavaScript Keywords
    - General Guidelines 
-	     1. Avoiding Global Namespace
-	     2. Declare Functions and Variables
-	     3. Declare Expressions cleanly
-	     4. Beware of JavaScript Type Conversion
-	     5. Comparison Operators, Confusion, and You
+	    
+	    1. Avoiding Global Namespace
+	    
+	    2. Declare Functions and Variables
+	    
+	    3. Declare Expressions cleanly
+	    
+	    4. Beware of JavaScript Type Conversion
+	    
+	    5. Comparison Operators, Confusion, and You
 
 ### 3. ES6 Syntax and Modularizing the React Workspace
 - Modules and Grouping Components
