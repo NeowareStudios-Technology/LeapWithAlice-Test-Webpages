@@ -1,6 +1,17 @@
+
 # Leap With Alice React-Native-Web Documentation Standards, Naming Conventions.
  Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms, possible in web because of babel transpiler). 
  
+ ### Good React Resources:
+ [Facebook's React-Native Docs](https://facebook.github.io/react-native/docs/getting-started)
+[React-Native DOM for Web](http://reactnative.com/react-native-dom/)
+[RN Tester](https://rntester.now.sh/)
+[React-Native-Web Docs](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/getting-started.md)
+[RNWeb Component, APIs, and Example Apps](https://necolas.github.io/react-native-web/storybook/?selectedKind=Components&selectedStory=ActivityIndicator&full=0&addons=0&stories=1&panelRight=0)
+[Zeplin](https://zeplin.io/)
+ [UIZoo](https://myheritage.github.io/UiZoo.js/)
+[Redux / Flux Q&A](https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux)
+[React SketchApp from AirBnB](https://github.com/airbnb/react-sketchapp)
 # Table of Contents:
 ### 1. Commenting &amp; Documentation *(read: styleguide)*
 
@@ -99,7 +110,6 @@ var  person = {
 -   Constants (like PI) written in  **UPPERCASE**
  - Hyphens can be mistaken as subtraction attempts. Hyphens are NOT    	allowed in JavaScript names.
 
-#### Common Errors in JS [Common Mistakes](https://www.w3schools.com/js/js_mistakes.asp)
 
 #### If you still want/ need more info on javascript specific content please reference the  [MDN Dev Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
@@ -394,8 +404,8 @@ class Rectangle {
   }
 
   position(x, y) {
-    this.x = 400px;
-    this.y = 200px;
+    this.x = x;
+    this.y = y;
   }
 }
 ```
@@ -627,3 +637,209 @@ As its documentation states, redux is a predictable state container for JavaScri
 
 #### Why should I use it?
 React does not consider direct component-to-component communication as a good practice even if it has the ability to support it. An architecture like this, is going to lead to a poorly structured source code sooner or later which will be difficult to maintain and scale. Redux offers a way to store all of the application state in just one place with global scope. Then your React Native components dispatch actions that trigger changes to the store. Components that need to “know” about those changes should be connected to Redux state.
+
+#### You may hear about Flux, but what is it? And how does it compare to my precious Redux?
+
+Redux is not  _that_  different from Flux. Overall it has same architecture, but Redux is able to cut some complexity corners by using functional composition where Flux uses callback registration.
+
+There is not a fundamental difference in Redux, but I find it makes certain abstractions easier, or at least possible to implement, that would be hard or impossible to implement in Flux.
+
+[Read More on Stack Overflow](https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux)
+
+
+# Bonus Section
+If you made it this far, perhaps you like to read, or are maybe desperate. Anywho, here is compilation of common mistakes in JavaScript, an explanation of what went wrong, and how to fix it.
+
+### [Read More](https://www.w3schools.com/js/js_mistakes.asp)
+
+## First Lesson: Assignment Operator Mishap
+
+ This if statement returns true (hopefully not as expected), because 10 is true:
+```js
+var x = 0;	// initializing x to 0
+if (x = 10)	// setting it's value to 10, 
+			// not comparing!
+```
+ 
+This *if* statement returns false (as expected) because x is not equal to 10:
+```js
+var x = 0; 	  // initializing x to 0
+if (x == 10)  // Comparing it's value to 10
+// or if (x === 10)
+// This (===) would check type AND value.
+```
+
+## Using Strict Mode
+`StrictMode`  currently helps with:
+
+-   [Identifying components with unsafe lifecycles](https://reactjs.org/docs/strict-mode.html#identifying-unsafe-lifecycles)
+-   [Warning about legacy string ref API usage](https://reactjs.org/docs/strict-mode.html#warning-about-legacy-string-ref-api-usage)
+-   [Detecting unexpected side effects](https://reactjs.org/docs/strict-mode.html#detecting-unexpected-side-effects)
+-   [Detecting legacy context API](https://reactjs.org/docs/strict-mode.html#detecting-legacy-context-api)
+
+### Example:
+```js
+import React from 'react';
+
+function ExampleApplication() {
+  return (
+    <View>
+      <Header />
+      <React.StrictMode>
+        <View>
+          <ComponentOne />
+          <ComponentTwo />
+        </View>
+      </React.StrictMode>
+      <Footer />
+    </View>
+  );
+}
+```
+In the above example, strict mode checks will _not_ be run against the `Header` and `Footer`components. However, `ComponentOne` and `ComponentTwo`, as well as all of their descendants, will have the checks.
+
+Read More on React Strict Mode
+## Expecting Loose Comparison
+In regular comparison, data type does not matter. This if statement returns true:
+```js
+var x = 10;
+var y = "10";
+if (x == y)
+```
+In strict comparison, data type does matter. This if statement returns false:
+
+```js 
+var x = 10;
+var y = "10";
+if (x === y)
+```
+#### Switches *Always* use strict typing
+
+This case switch will display an alert:
+
+```js
+var x = 10;
+switch(x) {
+    case 10: alert("Hello");
+}
+```
+This case switch will not display an alert:
+```js
+var x = 10;
+switch(x) {
+    case "10": alert("Hello");
+}
+```
+
+## Confusing Addition & Concatenation
+
+**Addition**  is about adding  **numbers**.
+
+**Concatenation**  is about adding  **strings**.
+
+In JavaScript both operations use the same + operator.
+
+### Example Functions
+```js
+function(){
+	console.log(4 + 4); // result: 8 as expected
+}
+```
+Now let's take a look at if the number as been "type" changed on purpose or by accident into a string
+```js
+function(){
+    console.log(4 + "4"); 
+    // result: 44, most likely not intended
+}
+```
+
+## Breaking a Return Statement
+
+It is a default JavaScript behavior to close a statement automatically at the end of a line.
+
+Because of this, these two examples will return the same result:
+
+### Example 1
+```js
+function  myFunction(a) {  
+    var  power =  10  
+    return  a * power  
+} 
+```
+
+
+### Example 2
+```js
+function  myFunction(a) {  
+    var  power =  10;  
+    return  a * power;  
+}
+```
+
+## Accessing Arrays / Objects
+
+Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does  **not**  support arrays with named indexes.
+
+In JavaScript,  **arrays**  use  **numbered indexes**:
+
+#### Objects:
+In JavaScript,  **objects**  use  **named indexes**.
+
+If you use a named index, when accessing an array, JavaScript will redefine the array to a standard object.
+
+After the automatic redefinition, array methods and properties will produce undefined or incorrect results:
+
+## Undefined vs. Null. What's the big deal?
+
+JavaScript objects, variables, properties, and methods can be  **undefined**.
+
+In addition, empty JavaScript objects can have the value  **null**.
+
+This can make it a little bit difficult to test if an object is empty.
+
+You can test if an object exists by testing if the type is  **undefined**:
+
+### Example:
+```js
+if  (typeof  myObj ===  "undefined")
+```
+
+But you cannot test if an object is  **null**, because this will throw an error if the object is undefined:
+
+### Incorrect:
+```js
+if  (myObj ===  null)
+```
+To solve this problem, you must test if an object is not  **null**, and not  **undefined**.
+
+ You must test for not  **undefined**  BEFORE you can test for not  **null**:
+
+### Correct:
+```js
+if  (typeof  myObj !==  "undefined"  && myObj !==  null)
+```
+
+## Expecting Block Level Scope
+
+JavaScript  **does not**  create a new scope for each code block.
+
+It is true in many programming languages, but  **not true**  in JavaScript.
+
+This code will display the value of i (10), even OUTSIDE the for loop block:
+
+### Example
+```js
+for  (var  i =  0; i <  10; i++) {  
+// some code  
+}  
+return  i;
+```
+## Wrap up
+That about wraps up all the quirks of JavaScript and es6 syntax that I believe will be relevant to the application. Hopefully this sort of guide can serve as a first place to search for answers and give good enough resources to grasp the concepts.
+
+Thanks!
+-Ronnie Forcier
