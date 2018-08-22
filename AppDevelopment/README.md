@@ -9,8 +9,6 @@
 
 [RN Tester](https://rntester.now.sh/)
 
-[React-Native-Web Docs](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/getting-started.md)
-
 [RNWeb Component, APIs, and Example Apps](https://necolas.github.io/react-native-web/storybook/?selectedKind=Components&selectedStory=ActivityIndicator&full=0&addons=0&stories=1&panelRight=0)
 
 [Zeplin](https://zeplin.io/)
@@ -20,6 +18,17 @@
 [Redux / Flux Q&A](https://stackoverflow.com/questions/32461229/why-use-redux-over-facebook-flux)
 
 [React SketchApp from AirBnB](https://github.com/airbnb/react-sketchapp)
+
+### React-Native-Web (Compatability React-Native 0.55, current= 0.56)
+
+[React-Native-Web Docs](https://github.com/necolas/react-native-web/blob/master/packages/website/guides/getting-started.md)
+
+### Reacct-native-web web specific- UI patterns
+[Links](https://codesandbox.io/s/53r88k5opx)
+
+[Hover styles](https://codesandbox.io/s/o9q8vy70l5)
+
+[Root element styles](https://codesandbox.io/s/52x1871vjl)
 
 # Table of Contents:
 ### 1. Commenting &amp; Documentation *(read: styleguide)*
