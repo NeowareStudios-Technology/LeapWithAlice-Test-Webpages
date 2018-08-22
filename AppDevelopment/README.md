@@ -1,5 +1,6 @@
-# Leap With Alice Web Development JavaScript Introduction and Documentation Standards Best Practices:
-
+# Leap With Alice React-Native-Web Documentation Standards, Naming Conventions.
+ Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms, possible in web because of babel transpiler). 
+ 
 # Table of Contents:
 ### 1. Commenting &amp; Documentation *(read: styleguide)*
 
