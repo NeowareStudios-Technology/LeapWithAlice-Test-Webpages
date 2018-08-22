@@ -34,9 +34,9 @@ Always put spaces around operators ( = + - * / ), and after commas:
 var x = y + z;  
 var values = []; // initialize array first
 values.push("Volvo",  // then add values 
-			"Saab",   
-			"Fiat"
-		   );
+            "Saab",   
+	    "Fiat"
+	   );
 console.log(values); // result: ["Volvo", "Saab", "Fiat"]
 ```
 
@@ -58,7 +58,7 @@ function  toCelsius(fahrenheit) {
 ### Loops:
 ```js
 for  (i =  0; i <  5; i++) {  
-x += i;  
+  x += i;  
 }
 ```
 
@@ -192,7 +192,7 @@ const add = (function(){
 	let counter = 0;
     return ()=>{
     	counter += 1; 
-		return counter;
+	return counter;
     }
 })();
 add();
@@ -265,7 +265,7 @@ discount = 0,
 fullPrice = 0, 
 tax = 0,
 myArray = [],  
-myObject = {};
+myObject = {}; // remember to end declarations with a semi-colon.
 
 // Declare Functions:
 function foo() {
@@ -281,8 +281,8 @@ var baz = function() {
   console.log(fullPrice);
 };
 
-if (foo(); //"Jimmy";
-baz(); //"20";
+if (foo(); //result: "Jimmy";
+baz(); //result: "20";
 ```
  
 ## C. Never Initialize a Number, String, or Boolean as Objects, there are Better ways to declare Them
