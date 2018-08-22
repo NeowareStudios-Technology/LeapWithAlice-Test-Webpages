@@ -620,6 +620,7 @@ The main piece of advice you will always hear when practicing React is to NEVER 
 There is a method in React that allows you to do that called ```setState()```
 
 ### React / Redux short read on importance:
+[Source](https://pub.monospacelabs.com/react-native-developing-using-best-practices-part-1-9d6f3bd77a68)
 
 #### What’s Redux?
 As its documentation states, redux is a predictable state container for JavaScript applications. It’s both regular library and a data-flow architecture. A lot of people think that it comes with React Native and it is just another tool of it. That’s a big misunderstanding! It’s a framework-agnostic tool that fits with React Native really well but it still can be used with almost any JavaScript library or framework like jQuery, Angular, Ember, Meteor or even vanilla JavaScript.
