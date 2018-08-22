@@ -536,6 +536,9 @@ Sources:
 
 [JavaScript Module Pattern in depth](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
 
+![Universal Components for a Modular App](https://i.imgur.com/2NLmj0W.png)
+
+
 First, I want to provide an ideal / modular file base architecture:
 ```js
 /src  
