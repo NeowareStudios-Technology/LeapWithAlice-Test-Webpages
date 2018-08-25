@@ -868,8 +868,94 @@ for  (var  i =  0; i <  10; i++) {
 }  
 return  i;
 ```
+
+# Updating React-Native Course Tutorial
+
+This section will be for comments/ concerns / troubleshooting as they happen from the React-Native course.
+This section will be continuously updated as I am able to get through the course.
+
+## NodeJS + NPM troubles:
+Side note: I have had some issues that seem to resolve themselves at strange times using NodeJS and npm. Although this is still probably the most efficient as simple ways to set up a local development environment.
+
+I would suggest downloading Node and NPM anyway.
+
+If you have problems when attempting to run the development server try to google
+'kern.maxfiles: 5242880
+kern.maxfilesperproc: 524288'
+
+Sometimes NPM will alert you to try this, but if not, this might save you some hassle.
+also try install watchman, it watches files as they change.
+
+## Create-React-App Documentation Change.
+From [Facebook React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
+
+First run:
+```
+npm install -g create-react-native-app
+```
+
+Then 
+```
+create-react-native-app project_name
+			// sidenote: I believe these project names
+			// no longer accept uppercase
+cd project_name
+
+npm start
+```
+
+## Running on iOS
+just type 
+```
+i
+```
+and expo will open iOS simulator from xCode,
+other options should be prompted when you start the npm package with expo
+### !Troubleshooting First couple vids!
+In one of the first videos where you are actually directed to upl, you won't be able to get your native app up and running without adding :
+```js
+export default App;
+```
+at the bottom of your App.js file.
+The author fails to mention this as this is a change from when the video was made.
+
+
+### Styling Preferences:
+
+In the tutorial videos Section 6 lecture 24, the author writes the styles for the ```<Header />``` component like so:
+```js
+const Header = () => {
+  const { textStyle } = styles; // This will change
+  return (
+    <View>
+      <Text style={styles.textStyle}>Test Application</Text>
+    </View>
+  );
+};
+
+```
+We can just reference the style sheet in the "style" tag itself without the extra step of declaring it a const. This is how our new app begins, and this is how we should continue to code our projects.
+
+```js
+const Header = () => {
+
+  return (
+    <View>   // notice no const AND just appending
+		    // styles.customStyle
+      <Text style={styles.textStyle}>Test Application</Text>
+    </View>
+  );
+};
+
+```
+
+So instead of having a file with 20 const stylings, each component should reference their own styles in line.
+
 ## Wrap up
 That about wraps up all the quirks of JavaScript and es6 syntax that I believe will be relevant to the application. Hopefully this sort of guide can serve as a first place to search for answers and give good enough resources to grasp the concepts.
 
+I will continue updating this project with more information as I progress through the app tutorial
+
 Thanks!
 -Ronnie Forcier
+
