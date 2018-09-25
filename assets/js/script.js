@@ -1,12 +1,19 @@
 $(document).ready(function() {
 	var $investClose = $(".investClose");
 	var $investPopup = $("#test-popup");
-	//$investPopup.hide();
-	//setTimeout(function(){ $investPopup.show(); }, 6000);
 
+
+$investPopup.fadeIn();
+$(".overlay").show();
 	// Inline popups
 	$investClose.click(function() {
 			$investPopup.fadeOut();
+			$(".overlay").hide();
+	});
+
+	$(".overlay").click(function() {
+		$investPopup.fadeOut();
+		$(".overlay").hide();
 	});
 });
 
