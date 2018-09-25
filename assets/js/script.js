@@ -1,4 +1,18 @@
-/* Template	:	ICO Crypto v1.2.0 */
+$(document).ready(function() {
+	var $investClose = $(".investClose");
+	var $investPopup = $("#test-popup");
+	//$investPopup.hide();
+	//setTimeout(function(){ $investPopup.show(); }, 6000);
+
+	// Inline popups
+	$investClose.click(function() {
+			$investPopup.fadeOut();
+	});
+});
+
+
+
+/* Template	:	Leap With Alice Site*/
 (function($){
 	'use strict';
 	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
