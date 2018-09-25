@@ -728,12 +728,11 @@ html{background-color:#aaa;}
   width: 100%;
 }
 
-.centered {
-    position: fixed;
-    width: auto;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, 0);
+
+.popup-text{
+  font-size: 24px;
+  font-weight: 800;
+  width: auto;
 }
 
 .fontCenter{
@@ -747,6 +746,7 @@ html{background-color:#aaa;}
 
 .investClose:hover{
   cursor: pointer;
+  opacity: 0.5;
 }
 
 .investButton:hover{
@@ -755,11 +755,15 @@ html{background-color:#aaa;}
   border-radius: 50%;
 }
 
-.popup-text{
-  font-size: 24px;
-  font-weight: 800;
-  width: auto;
+a.investButton:hover + a.popup-text{
+  opacity: 0.5;
 }
+
+a.popup-text:hover  a.investButton{
+  opacity: 0.5 !important;
+}
+
+
 
 #popup-hr{
   border: 2px solid black !important;
