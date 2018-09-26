@@ -51,9 +51,7 @@
 <body class="theme-lavendar io-lavendar" data-spy="scroll" data-target="#mainnav" data-offset="80">
 
 
-  <div class="overlay">
-
-  </div>
+<div class="overlay"></div>
 
 
 
@@ -152,7 +150,7 @@
 
     <!-- Invest Popup-->
     <div class="align-items-center popupContainer">
-     <div id="test-popup" class="animated wrapper col-sm-12" data-animate="fadeInLeft" data-delay="1.5">
+     <div id="investPopup" class="animated wrapper col-sm-12" data-animate="fadeInLeft" data-delay="1.5">
       <div class="container investCotainer">
 
       <div class="col-sm-12 row ">
@@ -3047,32 +3045,7 @@
 
 	});
   </script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-
-var iframe = document.getElementById( 'sketch-view' );
-    var urlid = '66bab22422e8471e97858b63c2971975/embed?autospin=0.2&amp;autostart=1;';
-    var client = new Sketchfab( iframe );
-    client.init( urlid, {
-        success: function onSuccess( api ){
-            api.start();
-          //api.transparent(1);
-            api.addEventListener( 'viewerready', function() {
-
-                // API is ready to use
-                // Insert your code here
-                console.log( 'Viewer is ready' );
-
-            } );
-        },
-        error: function onError() {
-            console.log( 'Viewer error' );
-        }
-    } );
-</script>
-<!--End Sketchfab API AR Script-->
-
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!--Begin Form Submit Script-->
 <!--<script src="assets/js/formvalidate.js"></script>-->
@@ -3083,7 +3056,10 @@ var iframe = document.getElementById( 'sketch-view' );
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="assets/js/hs-scripts.js"></script>
     <!-- End of HubSpot Embed Code -->
+
+    <!--
     <script type="text/javascript" src="assets/js/popup.js"></script>
+  -->
 </body>
 
 </html>
