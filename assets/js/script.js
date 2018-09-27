@@ -1,7 +1,4 @@
-/* Template	:	ICO & Leap With Alice Site */
-(function($){
-	'use strict';
-	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
+$(document).ready( function(){
 
 	var $investClose = $(".investClose");
 	var $investPopup = $("#investPopup");
@@ -15,9 +12,16 @@
 		MUST click close button to close popup.
 	 ------------------------- */
 	$investClose.click(function() {
-			$investPopup.slideUp();
+			$investPopup.hide();
 			$overlay.hide();
 	});
+});
+
+
+/* Template	:	ICO & Leap With Alice Site */
+(function($){
+	'use strict';
+	var $win = $(window), $body_m = $('body'), $navbar = $('.navbar');
 
 	// Touch Class
 	if (!("ontouchstart" in document.documentElement)) {

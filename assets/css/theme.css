@@ -771,6 +771,7 @@ a.investButton:hover + a.popup-text{
 div.overlay {
     position: absolute;
     z-index: 900;
+    display: none;
     width: 100%;
     height: 100%;
     top: 0;
