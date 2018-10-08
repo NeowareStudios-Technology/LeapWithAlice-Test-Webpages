@@ -406,15 +406,17 @@ $(document).ready( function(){
 		});
 	}
 
+
 	// Preloader
 	var $preload = $('#preloader'), $loader = $('#loader');
 	if ($preload.length > 0) {
 		$win.on('load', function() {
-			$loader.fadeOut(300);
+			$loader.fadeOut(200);
 			$body_m.addClass("loaded");
-			$preload.delay(700).fadeOut(300);
+			$preload.delay(100).fadeOut(100);
 		});
 	}
+
 
 	/* @v1.2.0 */
 	//Process Slider
@@ -424,7 +426,7 @@ $(document).ready( function(){
 		$(slider_p).addClass('owl-carousel').owlCarousel({
 		 	items:1,
 			nav:false,
-			dotsContainer:slider_n,
+			dotsContainer: slider_n,
 			margin:30,
 			loop:true,
 			autoplayTimeout:3000,
