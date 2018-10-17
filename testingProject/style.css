@@ -17,7 +17,7 @@ body{
   left:0;
   right:0;
   bottom:0;
-  background-color:#CCC;
+  background-color:#fff;
   display:flex;
   width: auto;
   flex-wrap: no-wrap;
@@ -104,8 +104,44 @@ img{
 /* ========================
   Font Styling:
 =========================== */
-span.section-title{
-  font-size: 5vh;
+
+@font-face {
+  font-family: Atlan-Regular;
+  src: url(./assets/fonts/Atlan-Regular.otf);
+}
+
+@font-face {
+  font-family: Atlan-Black;
+  src: url(./assets/fonts/Atlan-Black.otf);
+}
+
+@font-face {
+  font-family: Atlan-Thin;
+  src: url(./assets/fonts/Atlan-Thin.otf);
+}
+
+@font-face {
+  font-family: Atlan-Light;
+  src: url(./assets/fonts/Atlan-Light.otf);
+}
+
+@font-face {
+  font-family: Atlan-Bold;
+  src: url(./assets/fonts/Atlan-Bold.otf);
+}
+
+@font-face {
+  font-family: Atlan-Heavy;
+  src: url(./assets/fonts/Atlan-Heavy.otf);
+}
+
+@font-face {
+  font-family: Atlan-SemiBold;
+  src: url(./assets/fonts/Atlan-SemiBold.otf);
+}
+
+h1.section-title{
+  font-family: 'Atlan-Bold';
 }
 
 div.pane div.side-text{
@@ -114,28 +150,34 @@ div.pane div.side-text{
 }
 
 div.side-text > p.text-description{
-  font-size: 3.5vh;
+  font-family: 'Atlan-Regular';
+  font-size: 30px;
   height: auto;
   overflow-wrap: break-word;
   width: 350px;
 }
 
-.first-description{
+p.first-description{
+  font-family: 'Atlan-Regular'
   width: 500px;
   color: #777;
 }
-@media screen and (max-width: 800px)
-{
-  .pane{
-    width: 200vw;
+
+/*
+  Mobile Styling!
+*/
+@media screen and (max-width: 800px) {
+  .pane {
+    width: auto;
     justify-content: center;
     align-items: center;
   }
+
   .pane > div {
     margin: 0 50px;
   }
 
-div.side-text > p.text-description{
+  div.side-text > p.text-description{
     padding: 10px 30px;
     margin: 0 30px;
     width: 500px;
@@ -143,12 +185,16 @@ div.side-text > p.text-description{
 
   div.side-text{
     width: 500px !important;
-    margin-right: 20px;
-    padding-right: 20px;
+    margin-right: 80px;
+    padding-right: 80px;
   }
 
   .phone-img{
     height: 90vh !important;
+  }
+
+  h1.section-title{
+    margin-left: 60px;
   }
 
 }
