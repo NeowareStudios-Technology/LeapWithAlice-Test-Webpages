@@ -1,0 +1,154 @@
+/* ========================
+  General Styling:
+=========================== */
+
+body{
+  overflow-x:hidden;
+  color:#FFF;
+  font-family:Helvetica;
+  font-size:200%;
+}
+
+#page {
+  overflow:hidden;
+  white-space: wrap;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#CCC;
+  display:flex;
+  width: auto;
+  flex-wrap: no-wrap;
+}
+.pane {
+  flex:0 0 100vw;
+  height:100vh;
+  display:flex;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color: #fff;
+  color: #000;
+}
+
+.pane:nth-child(5n+2)  {
+  background-color: #fff;
+}
+.pane:nth-child(5n+3)  {
+  background-color: #fff;
+}
+.pane:nth-child(5n+4)  {
+  background-color: #fff;
+}
+.pane:last-child {
+  background-color: #fff;
+}
+
+.vid-bg{
+}
+
+/* ========================
+  Images Styling:
+=========================== */
+img{
+  max-height: 90vh;
+}
+
+#logo {
+	position: fixed;
+	z-index: 999;
+  height: 103px;
+  width: auto;
+  cursor: pointer;
+}
+
+
+#phoneStraightAddExperience{
+  max-height: 90vh;
+  background:
+  url('./assets/images/Earth.png') no-repeat,
+  url('./assets/images/PNGs/abstractPainting.png') no-repeat;
+  background-size: 20vh, 50vh;
+  min-background-size: 20vh, 50vh;
+  background-position: 45% 50%, 30% 60%;
+  -webkit-animation: earth-float 2s infinite; /* Safari 4.0 - 8.0 */
+  animation: earth-float 2s infinite;
+  transition-timing-function: linear;
+}
+
+/* -----------------------------------
+    Earth & Painting
+    Animations / Positioning
+-------------------------------------- */
+
+@keyframes earth-float {
+	  0% {
+      background-position:
+      45% 45%,
+      30% 50%;
+    }
+    50% {
+      background-position:
+      45% 50%,
+      30% 50%;
+    }
+    100% {
+      background-position:
+      45% 45%,
+      30% 50%;
+    }
+}
+
+/* ========================
+  Font Styling:
+=========================== */
+span.section-title{
+  font-size: 5vh;
+}
+
+div.pane div.side-text{
+    overflow-x: visible;
+    overflow-wrap: break-word;
+}
+
+div.side-text > p.text-description{
+  font-size: 3.5vh;
+  height: auto;
+  overflow-wrap: break-word;
+  width: 350px;
+}
+
+.first-description{
+  width: 500px;
+  color: #777;
+}
+@media screen and (max-width: 800px)
+{
+  .pane{
+    width: 200vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .pane > div {
+    margin: 0 50px;
+  }
+
+div.side-text > p.text-description{
+    padding: 10px 30px;
+    margin: 0 30px;
+    width: 500px;
+  }
+
+  div.side-text{
+    width: 500px !important;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+
+  .phone-img{
+    height: 90vh !important;
+  }
+
+}
