@@ -10,11 +10,12 @@ window.onscroll = function () {
 
   // Looping Scroll.
   var diff = window.scrollY - dummy_x;
+
   if (diff > 0) {
     window.scrollTo(0, diff);
   }
   else if (window.scrollY == 0) {
-    window.scrollTo(0, dummy_x);
+    window.scrollTo(0, 0);
   }
 }
 // Adjust the body height if the window resizes.
@@ -29,3 +30,21 @@ function resize() {
 
   dummy_x = last_pane.getBoundingClientRect().left+window.scrollY;
 }
+
+$(document).ready( function(){
+	var $investClose = $(".investClose");
+	var $investPopup = $("#investPopup");
+	var $overlay = $(".overlay");
+
+	// Onload, trigger popup
+	$investPopup.show();
+	$overlay.show();
+
+	/* -------------------------
+		MUST click close button to close popup.
+	 ------------------------- */
+	$investClose.click(function() {
+			$investPopup.hide();
+			$overlay.hide();
+	});
+});
