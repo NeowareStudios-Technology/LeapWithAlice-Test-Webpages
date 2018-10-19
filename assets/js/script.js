@@ -1,21 +1,22 @@
-$(document).ready( function(){
-
-	var $investClose = $(".investClose");
-	var $investPopup = $("#investPopup");
-	var $overlay = $(".overlay");
-
-	// Onload, trigger popup
-	$investPopup.show();
-	$overlay.show();
-
-	/* -------------------------
-		MUST click close button to close popup.
-	 ------------------------- */
-	$investClose.click(function() {
-			$investPopup.hide();
-			$overlay.hide();
-	});
-});
+// POP UP functionality. Removed for new landing page 
+//$(document).ready( function(){
+//
+// 	var $investClose = $(".investClose");
+// 	var $investPopup = $("#investPopup");
+// 	var $overlay = $(".overlay");
+//
+// 	// Onload, trigger popup
+// 	$investPopup.show();
+// 	$overlay.show();
+//
+// 	/* -------------------------
+// 		MUST click close button to close popup.
+// 	 ------------------------- */
+// 	$investClose.click(function() {
+// 			$investPopup.hide();
+// 			$overlay.hide();
+// 	});
+// });
 
 
 /* Template	:	ICO & Leap With Alice Site */
